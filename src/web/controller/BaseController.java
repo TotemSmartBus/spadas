@@ -63,16 +63,7 @@ public class BaseController {
         int batch = 10;
         int end = Math.min(batch * (id + 1), len);
         CityVo vo = new CityVo(Framework.cityNodeList.subList(batch * id, end));
-//        TimeUnit.MINUTES.sleep(1);
-//        System.out.println("sleep for 1 minute!");
-//        HashMap a = new HashMap() {{
-//            put("nodes", Framework.indexNodes);
-//            put("filenames", Framework.datasetIdMapping);
-//        }};
-////        return new HashMap(){{put("nodes", Framework.indexNodes); put("filenames",Framework.datasetIdMapping); }};
-//        return a;
-//        CityVo dlv = new CityVo(Framework.cityNodeList, Framework.indexNodes, Framework.datasetIdMapping);
-//        CityVo dlv = new CityVo(Framework.cityNodeList);
+//        TimeUnit.SECONDS.sleep(2);
         return vo;
     }
 //    @ApiOperation("load dataset")

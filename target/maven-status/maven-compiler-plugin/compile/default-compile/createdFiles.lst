@@ -118,7 +118,6 @@ au\edu\rmit\trajectory\clustering\kpaths\Path.class
 au\edu\rmit\mtree\PromotionFunctions.class
 au\edu\rmit\trajectory\clustering\kmeans\indexNode.class
 au\edu\rmit\mtree\DistanceFunctions$5.class
-web\controller\BaseController$7.class
 au\edu\rmit\mtree\tests\Fixture$Action.class
 au\edu\rmit\mtree\PartitionFunctions$BalancedPartition.class
 edu\nyu\dss\similarity\Search.class
