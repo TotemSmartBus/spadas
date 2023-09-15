@@ -8,3 +8,9 @@ spadas:
     baseUri: ./dataset/
     # 网页请求路径
     staticUri: /dataset/
+
+
+spark:
+  app:
+    name: spadas
+    master: local

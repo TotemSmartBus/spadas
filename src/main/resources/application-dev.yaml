@@ -19,3 +19,8 @@ spadas:
     baseUri: ./dataset-mini/
     # 网页请求路径
     staticUri: /dataset-mini/
+
+spark:
+  app:
+    name: spadas
+    master: local
