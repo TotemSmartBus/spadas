@@ -9,7 +9,8 @@ import edu.nyu.dss.similarity.index.IndexBuilder;
 import edu.nyu.dss.similarity.statistics.DatasetSizeCounter;
 import edu.nyu.dss.similarity.statistics.PointCounter;
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
-import edu.whu.index.TrajectorySpatialIndex;
+import edu.whu.index.FilePathIndex;
+import edu.whu.index.TrajectoryDataIndex;
 import edu.whu.structure.Trajectory;
 import lombok.extern.slf4j.Slf4j;
 import org.geotools.data.FileDataStore;
@@ -24,10 +25,7 @@ import org.springframework.stereotype.Component;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 @Component
 @Slf4j
@@ -53,9 +51,12 @@ public class ShapefileReader {
     @Autowired
     private IndexBuilder indexBuilder;
 
+    @Autowired
+    private FilePathIndex filePathIndex;
+
 
     @Autowired
-    private TrajectorySpatialIndex trajectorySpatialIndex;
+    private TrajectoryDataIndex trajectoryDataIndex;
 
     private double[] latRange = new double[]{-74.214328, -73.726123};
     private double[] lonRange = new double[]{40.622748, 40.884902};
@@ -87,10 +88,10 @@ public class ShapefileReader {
                     // TODO 实现路线轨迹的提取算法
                     ArrayList<Trajectory> trajectories = getMultiLineString((MultiLineString) defaultGeometry);
                     List<double[]> points = trajectories.stream().flatMap(ArrayList::stream).toList();
-                    if (trajectorySpatialIndex.containsKey(id)) {
-                        trajectorySpatialIndex.get(id).addAll(trajectories);
+                    if (trajectoryDataIndex.containsKey(id)) {
+                        trajectoryDataIndex.get(id).addAll(trajectories);
                     } else {
-                        trajectorySpatialIndex.put(id, trajectories);
+                        trajectoryDataIndex.put(id, trajectories);
                     }
                     hasTrajectory = true;
                     locations.addAll(points);
@@ -123,11 +124,13 @@ public class ShapefileReader {
         if (config.isCacheIndex()) {
             IndexNode node;
             node = indexBuilder.createDatasetIndex(id, spatialData, hasTrajectory ? 0 : 1, cityNode);
-            indexBuilder.samplingDataByGrid(spatialData, id, node);
             node.setFileName(file.getParent());
+            indexBuilder.samplingDataByGrid(spatialData, id, node);
+
         }
         datasetIDMapping.put(id, file.getName());
         fileIDMap.put(id, file);
+        filePathIndex.put(file.getAbsolutePath(), id);
     }
 
     private List<double[]> getMultiPolygonPoints(MultiPolygon polygon) {

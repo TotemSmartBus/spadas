@@ -6,6 +6,7 @@ import edu.nyu.dss.similarity.index.*;
 import edu.nyu.dss.similarity.statistics.DatasetSizeCounter;
 import edu.nyu.dss.similarity.statistics.PointCounter;
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
+import edu.whu.index.FilePathIndex;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,10 @@ public class ChinaReader {
 
     @Autowired
     private IndexBuilder indexBuilder;
+
+    @Autowired
+    private FilePathIndex filePathIndex;
+
 
     public Map<Integer, double[][]> read(File file, int fileNo, CityNode cityNode, int datasetIDForOneDir) throws IOException {
         if (!file.getName().endsWith("csv")) {
@@ -105,8 +110,7 @@ public class ChinaReader {
             }
             datasetIDMapping.put(fileNo, shortName);
             fileIDMap.put(fileNo, file);
-//          storeZcurve(xxx, fileNo, 5, 5, 30, 100);
-////        EffectivenessStudy.SerializedZcurve(zcodemap);
+            filePathIndex.put(file.getAbsolutePath(), fileNo);
         }
         return dataMapPorto;
     }

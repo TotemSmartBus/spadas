@@ -6,7 +6,8 @@ import edu.nyu.dss.similarity.datasetReader.*;
 import edu.nyu.dss.similarity.index.*;
 import edu.rmit.trajectory.clustering.kmeans.IndexAlgorithm;
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
-import edu.whu.index.TrajectorySpatialIndex;
+import edu.whu.index.FilePathIndex;
+import edu.whu.index.TrajectoryDataIndex;
 import edu.whu.structure.Trajectory;
 import edu.whu.tmeans.augment.BrutalForceAugment;
 import edu.whu.tmeans.model.GeoLocation;
@@ -57,10 +58,13 @@ public class FrameworkService {
     public DataMapPorto dataMapPorto;
 
     @Autowired
-    public TrajectorySpatialIndex trajectorySpatialIndex;
-    
+    public TrajectoryDataIndex trajectoryDataIndex;
+
     @Autowired
     public FileIDMap fileIDMap;
+
+    @Autowired
+    public FilePathIndex filePathIndex;
 
     @Autowired
     private Framework framework;
@@ -358,7 +362,7 @@ public class FrameworkService {
             if (datasetProperties.containsKey(candidate.getId())) {
                 name = (String) (datasetProperties.get(candidate.getId()).get("name"));
             }
-            name = "Nearest " + n + " " + name;
+            name = "Nearest " + (n > 1 ? (n + " ") : "") + name;
             results.put(name, eraseColumn);
         }
         targetDataset.getColumns().putAll(results);
@@ -366,6 +370,6 @@ public class FrameworkService {
     }
 
     public ArrayList<Trajectory> getTrajectory(int datasetId) {
-        return trajectorySpatialIndex.get(datasetId);
+        return trajectoryDataIndex.get(datasetId);
     }
 }

@@ -8,6 +8,7 @@ import edu.nyu.dss.similarity.index.*;
 import edu.nyu.dss.similarity.statistics.DatasetSizeCounter;
 import edu.nyu.dss.similarity.statistics.PointCounter;
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
+import edu.whu.index.FilePathIndex;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -47,9 +48,8 @@ public class OpenNycReader {
     @Autowired
     private IndexBuilder indexBuilder;
 
-
     @Autowired
-    private DatasetPerDir datasetPerDir;
+    private FilePathIndex filePathIndex;
 
     @Autowired
     private DatasetProperties propertiesIndex;
@@ -161,6 +161,7 @@ public class OpenNycReader {
         }
         datasetIDMapping.put(id, file.getName());
         fileIDMap.put(id, file);
+        filePathIndex.put(file.getAbsolutePath(), id);
     }
 
     private boolean emptyPosition(double lat, double lng) {
