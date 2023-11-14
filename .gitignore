@@ -69,6 +69,6 @@ hs_err_pid*
 nohup.out
 
 # big dataset
-dataset-mini/new-york-road/gis_osm_roads_free_1.dbf
-dataset-mini/new-york-road/gis_osm_roads_free_1.shp
+/dataset-mini/new-york-road/gis_osm_roads_free_1.dbf
+/dataset-mini/new-york-road/gis_osm_roads_free_1.shp
 
