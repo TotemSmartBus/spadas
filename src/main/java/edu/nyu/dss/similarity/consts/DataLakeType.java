@@ -8,19 +8,20 @@ import java.util.Objects;
 import java.util.function.Function;
 
 public enum DataLakeType {
+    PURE_LOCATION(13, true, (file) -> file.getName().contains("ywz") || file.getParent().contains("ywz")),
+    ARGOVERSE(13, true, (file)->file.getAbsolutePath().contains("argo")),
+    // if a folder contains shapefile(.shp), we extract it with SHAPEFILE_READER
+    SHAPE_FILE(12, true, (file) -> Objects.requireNonNull(file.list((f, name) -> name.matches(".*[.]shp"))).length > 0),
+    OPEN_NYC(11, true, (file) -> file.getName().contains("nyc") && file.getName().contains("open")),
+    POI(10, false, (file) -> file.getName().equals("poi")), // BAIDU POI
     // MOVE BANK
     MOVE_BANK(9, false, (file) -> file.getName().contains("movebank")), // BUS LINES
     BUS_LINE(8, false, "Bus_lines"::equals), // USA Datasets
     USA(8, true, (file) -> !file.getName().isEmpty() && Character.isUpperCase(file.getName().charAt(0))), // POIs
-    POI(10, false, (file) -> file.getName().equals("poi")), // BAIDU POI
+
     BAIDU_POI(7, true, (file) -> true),
+    ;
 
-    PURE_LOCATION(13, true, (file) -> file.getName().contains("ywz") || file.getParent().contains("ywz")),
-
-    OPEN_NYC(11, true, (file) -> file.getName().contains("nyc") && file.getName().contains("open")),
-
-    // if a folder contains shapefile(.shp), we extract it with SHAPEFILE_READER
-    SHAPE_FILE(12, true, (file) -> Objects.requireNonNull(file.list((f, name) -> name.matches(".*[.]shp"))).length > 0);;
     public final int id;
     public final boolean active;
     public final Function<File, Boolean> func;

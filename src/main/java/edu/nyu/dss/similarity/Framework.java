@@ -48,6 +48,8 @@ public class Framework {
     @Autowired
     private ChinaReader chinaReader;
 
+    @Autowired
+    private ArgoReader argoReader;
 
     @Autowired
     private FilePathIndex filePathIndex;
@@ -153,6 +155,7 @@ public class Framework {
                     case POI -> poiReader.read(file, fileNo++, cityNode);
                     case OPEN_NYC -> openNycReader.read(file, fileNo++, cityNode);
                     case SHAPE_FILE -> shapefileReader.read(file, fileNo++, cityNode);
+                    case ARGOVERSE -> argoReader.read(file, fileNo++, cityNode);
                     // impossible to be here, default type is BAIDU_POI
                     default -> throw new RuntimeException("Unknown dataset type:" + type.name());
                 }

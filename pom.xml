@@ -71,17 +71,27 @@
             <artifactId>jts</artifactId>
             <version>1.13</version>
         </dependency>
-        <dependency>
-            <groupId>org.geotools</groupId>
-            <artifactId>gt-shapefile</artifactId>
-            <version>29-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>30.0-jre</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-shapefile</artifactId>
+            <version>29.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apiguardian</groupId>
+                    <artifactId>apiguardian-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.measure</groupId>
+                    <artifactId>unit-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <!--        用于解析csv文件-->
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -106,15 +116,8 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
+            <version>3.12.0</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-csv</artifactId>
-            <version>1.6</version>
-        </dependency>
-
         <dependency>
             <groupId>it.unimi.dsi</groupId>
             <artifactId>fastutil</artifactId>
@@ -178,7 +181,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.20</version>
+            <version>1.18.30</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -186,12 +189,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>3.1.0</version>
+            <version>3.1.3</version>
         </dependency>
         <dependency>
             <groupId>org.geckoprojects.search</groupId>

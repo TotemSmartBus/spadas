@@ -2,7 +2,8 @@ package web.service;
 
 import edu.nyu.dss.similarity.*;
 import edu.nyu.dss.similarity.config.SpadasConfig;
-import edu.nyu.dss.similarity.datasetReader.*;
+import edu.nyu.dss.similarity.datasetReader.SingleFileReader;
+import edu.nyu.dss.similarity.datasetReader.UploadReader;
 import edu.nyu.dss.similarity.index.*;
 import edu.rmit.trajectory.clustering.kmeans.IndexAlgorithm;
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
@@ -17,11 +18,10 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import web.param.*;
-import web.Utils.FileU;
 import web.Utils.ListUtil;
 import web.VO.DatasetVo;
 import web.VO.JoinVO;
+import web.param.*;
 
 import java.io.IOException;
 import java.util.*;
@@ -253,37 +253,39 @@ public class FrameworkService {
 
     public JoinVO join(int queryId, int datasetId, int rowLimit) throws IOException {
         Pair<Double[], Map<Integer, Integer>> pair = pairwiseJoin(queryId, datasetId, rowLimit);
-        Map<Integer, Integer> map = pair.getRight();
-        double[][] queryData = dataMapPorto.get(queryId);
-        double[][] datasetData = dataMapPorto.get(datasetId);
-        Pair<String[], String[][]> querydata = FileU.readPreviewDataset(fileIDMap.get(queryId), rowLimit, queryData);
-        Pair<String[], String[][]> basedata = FileU.readPreviewDataset(fileIDMap.get(datasetId), Integer.MAX_VALUE, datasetData);
 
-        //int len = querydata.getRight()[0].length+basedata.getRight()[0].length;
-        String[] distHeader = {"distance(km)"};
-        String[] joinHeaderTemp = ArrayUtils.addAll(querydata.getLeft(), distHeader);
-        String[] joinHeader = ArrayUtils.addAll(joinHeaderTemp, basedata.getLeft());
-//        List<String[]> joindata = pair.getRight().entrySet().stream()
-//                .map(idPair -> ArrayUtils.addAll(querydata.getRight()[idPair.getValue()], basedata.getRight()[idPair.getValue()])).collect(Collectors.toList());
-        List<List<String>> joinData = new ArrayList<>();
-        String[] queryEntry;
-        String[] baseEntry;
-        Double[] distEntry = pair.getLeft();
-        String[] distEntryTemp;
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            int queryIndex = entry.getKey();
-            int datasetIndex = entry.getValue();
-            queryEntry = querydata.getRight()[queryIndex];
-            baseEntry = basedata.getRight()[datasetIndex];
-            double tmp = Math.round(distEntry[queryIndex] * 1000) / 1000.000;
-
-            String tmpStr = tmp < 5 ? String.valueOf(tmp) : "INVALID";
-            distEntryTemp = new String[]{tmpStr};
-            joinData.add(Arrays.stream(ArrayUtils.addAll(ArrayUtils.addAll(queryEntry, distEntryTemp), baseEntry)).toList());
-        }
+//        Map<Integer, Integer> map = pair.getRight();
+//        double[][] datasetData = dataMapPorto.get(datasetId);
+////        Pair<String[], String[][]> querydata = FileU.readPreviewDataset(fileIDMap.get(queryId), rowLimit, queryData);
+////        Pair<String[], String[][]> basedata = FileU.readPreviewDataset(fileIDMap.get(datasetId), Integer.MAX_VALUE, datasetData);
+//
+//        double[][] queryData = Arrays.copyOfRange(dataMapPorto.get(queryId), 0, 100);
+//        double[][] targetData = Arrays.copyOfRange(dataMapPorto.get(datasetId), 0, 100);
+//        //int len = querydata.getRight()[0].length+basedata.getRight()[0].length;
+//        String[] distHeader = {"distance(km)"};
+//        String[] joinHeaderTemp = ArrayUtils.addAll(querydata.getLeft(), distHeader);
+//        String[] joinHeader = ArrayUtils.addAll(joinHeaderTemp, basedata.getLeft());
+////        List<String[]> joindata = pair.getRight().entrySet().stream()
+////                .map(idPair -> ArrayUtils.addAll(querydata.getRight()[idPair.getValue()], basedata.getRight()[idPair.getValue()])).collect(Collectors.toList());
+//        List<List<String>> joinData = new ArrayList<>();
+//        String[] queryEntry;
+//        String[] baseEntry;
+//        Double[] distEntry = pair.getLeft();
+//        String[] distEntryTemp;
+//        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+//            int queryIndex = entry.getKey();
+//            int datasetIndex = entry.getValue();
+//            queryEntry = querydata.getRight()[queryIndex];
+//            baseEntry = basedata.getRight()[datasetIndex];
+//            double tmp = Math.round(distEntry[queryIndex] * 1000) / 1000.000;
+//
+//            String tmpStr = tmp < 5 ? String.valueOf(tmp) : "INVALID";
+//            distEntryTemp = new String[]{tmpStr};
+//            joinData.add(Arrays.stream(ArrayUtils.addAll(ArrayUtils.addAll(queryEntry, distEntryTemp), baseEntry)).toList());
+//        }
         JoinVO result = new JoinVO();
-        result.setHeader(Arrays.stream(joinHeader).toList());
-        result.setBody(joinData);
+//        result.setHeader(Arrays.stream(joinHeader).toList());
+//        result.setBody(joinData);
         return result;
     }
 
