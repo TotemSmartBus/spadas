@@ -1,1 +1,4120 @@
-{"view": {"allAccessPoints": [], "apiFoundryUrl": "https://dev.socrata.com/foundry/data.cityofnewyork.us/74wj-s5ij", "attachments": null, "attribution": "Taxi and Limousine Commission (TLC)", "attributionLink": null, "blobFilename": null, "blobId": null, "blobMimeType": null, "blobType": false, "bootstrapUrl": "/d/74wj-s5ij/visualization", "canPublish": false, "cartoUrl": "http://oneclick.cartodb.com/?file=https://data.cityofnewyork.us/api/views/74wj-s5ij/rows.geojson?accessType=DOWNLOAD", "category": "Transportation", "collectionParentView": null, "parentView": null, "columns": [{"id": 226610001, "name": "vendorid", "fieldName": "vendorid", "position": 1, "description": "A designation for the technology vendor that provided the record. CMT=Creative Mobile Technologies VTS= VeriFone, Inc. DDS=Digital Dispatch Systems", "width": 208, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111164, "cachedContents": {"largest": "VTS", "non_null": "168994353", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "not_null": "168994353", "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {"align": "left"}, "flags": null}, {"id": 226610002, "name": "tpep_pickup_datetime", "fieldName": "tpep_pickup_datetime", "position": 2, "description": "The date and time when the meter was engaged.", "width": 280, "dataTypeName": "calendar_date", "renderTypeName": "calendar_date", "tableColumnId": 32111165, "cachedContents": {"largest": "2011-02-22T21:01:27.000", "non_null": "168994353", "null": "0", "top": [{"item": "2010-11-07T01:00:00.000", "count": "522"}, {"item": "2010-11-07T01:10:00.000", "count": "501"}, {"item": "2010-11-07T01:01:00.000", "count": "501"}, {"item": "2010-11-07T01:30:00.000", "count": "500"}, {"item": "2010-11-07T01:02:00.000", "count": "499"}, {"item": "2010-11-07T01:13:00.000", "count": "499"}, {"item": "2010-11-07T01:09:00.000", "count": "490"}, {"item": "2010-11-07T01:33:00.000", "count": "490"}, {"item": "2010-11-07T01:05:00.000", "count": "489"}, {"item": "2010-11-07T01:07:00.000", "count": "489"}, {"item": "2010-11-07T01:15:00.000", "count": "488"}, {"item": "2010-11-07T01:16:00.000", "count": "485"}, {"item": "2010-11-07T01:37:00.000", "count": "483"}, {"item": "2010-11-07T01:17:00.000", "count": "481"}, {"item": "2010-11-07T01:08:00.000", "count": "476"}, {"item": "2010-11-07T01:19:00.000", "count": "474"}, {"item": "2010-11-07T01:53:00.000", "count": "473"}, {"item": "2010-11-07T01:14:00.000", "count": "473"}, {"item": "2010-11-07T01:40:00.000", "count": "472"}, {"item": "2010-11-07T01:35:00.000", "count": "468"}], "not_null": "168994353", "smallest": "2010-01-01T00:00:00.000", "count": "168994353", "cardinality": "26753988"}, "format": {"view": "date_time", "align": "left"}, "flags": null}, {"id": 226610003, "name": "dropoff_datetime", "fieldName": "dropoff_datetime", "position": 3, "description": "The date and time when the meter was disengaged.", "width": 292, "dataTypeName": "calendar_date", "renderTypeName": "calendar_date", "tableColumnId": 32111166, "cachedContents": {"largest": "2011-05-09T23:40:38.000", "non_null": "168994353", "null": "0", "top": [{"item": "2010-11-07T01:39:00.000", "count": "500"}, {"item": "2010-11-07T01:21:00.000", "count": "496"}, {"item": "2010-11-07T01:23:00.000", "count": "495"}, {"item": "2010-11-07T01:26:00.000", "count": "493"}, {"item": "2010-11-07T01:34:00.000", "count": "491"}, {"item": "2010-11-07T01:27:00.000", "count": "488"}, {"item": "2010-11-07T01:29:00.000", "count": "487"}, {"item": "2010-11-07T01:36:00.000", "count": "481"}, {"item": "2010-11-07T01:53:00.000", "count": "481"}, {"item": "2010-11-07T01:35:00.000", "count": "480"}, {"item": "2010-11-07T01:43:00.000", "count": "477"}, {"item": "2010-11-07T01:44:00.000", "count": "473"}, {"item": "2010-11-07T01:45:00.000", "count": "473"}, {"item": "2010-11-07T01:40:00.000", "count": "471"}, {"item": "2010-11-07T01:22:00.000", "count": "471"}, {"item": "2010-11-07T01:46:00.000", "count": "468"}, {"item": "2010-11-07T01:55:00.000", "count": "468"}, {"item": "2010-11-07T01:28:00.000", "count": "467"}, {"item": "2010-11-07T01:37:00.000", "count": "467"}, {"item": "2010-11-07T02:00:00.000", "count": "465"}], "not_null": "168994353", "smallest": "2010-01-01T00:00:00.000", "count": "168994353", "cardinality": "26772452"}, "format": {"view": "date_time", "align": "left"}, "flags": null}, {"id": 226610004, "name": "passenger_count", "fieldName": "passenger_count", "position": 4, "description": "The number of passengers in the vehicle. This is a driver-entered value.", "width": 280, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111167, "cachedContents": {"largest": "255", "non_null": "168994353", "null": "0", "top": [{"item": "1", "count": "115776112"}, {"item": "2", "count": "26793220"}, {"item": "5", "count": "14217357"}, {"item": "3", "count": "7710551"}, {"item": "4", "count": "3770213"}, {"item": "6", "count": "690626"}, {"item": "0", "count": "35640"}, {"item": "208", "count": "603"}, {"item": "7", "count": "4"}, {"item": "9", "count": "3"}, {"item": "10", "count": "3"}, {"item": "255", "count": "2"}, {"item": "250", "count": "2"}, {"item": "34", "count": "1"}, {"item": "51", "count": "1"}, {"item": "58", "count": "1"}, {"item": "65", "count": "1"}, {"item": "91", "count": "1"}, {"item": "125", "count": "1"}, {"item": "133", "count": "1"}], "not_null": "168994353", "smallest": "0", "count": "168994353", "cardinality": "30"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610005, "name": "trip_distance", "fieldName": "trip_distance", "position": 5, "description": "The elapsed trip distance in miles reported by the taximeter.", "width": 256, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111168, "cachedContents": {"largest": "16201631.4", "non_null": "168994353", "null": "0", "top": [{"item": "0.90000000000000002", "count": "3919921"}, {"item": "1", "count": "3905340"}, {"item": "0.80000000000000004", "count": "3846907"}, {"item": "1.1000000000000001", "count": "3777055"}, {"item": "1.2", "count": "3610784"}, {"item": "0.69999999999999996", "count": "3589731"}, {"item": "1.3", "count": "3415190"}, {"item": "1.3999999999999999", "count": "3247462"}, {"item": "0.59999999999999998", "count": "3125865"}, {"item": "1.5", "count": "3059544"}, {"item": "1.6000000000000001", "count": "2890587"}, {"item": "1.7", "count": "2701717"}, {"item": "1.8", "count": "2528002"}, {"item": "0.5", "count": "2456244"}, {"item": "1.8999999999999999", "count": "2360102"}, {"item": "2", "count": "2200941"}, {"item": "2.1000000000000001", "count": "2047060"}, {"item": "2.2000000000000002", "count": "1903357"}, {"item": "2.2999999999999998", "count": "1769706"}, {"item": "0.40000000000000002", "count": "1657373"}], "not_null": "168994353", "smallest": "-21474834", "count": "168994353", "cardinality": "6667"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610006, "name": "pickup_longitude", "fieldName": "pickup_longitude", "position": 6, "description": "Longitude where the meter was engaged.", "width": 292, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111169, "cachedContents": {"largest": "3569.9308500000002", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "3589321"}, {"item": "-73.137393000000003", "count": "125840"}, {"item": "-73.995807999999997", "count": "17623"}, {"item": "-73.951457000000005", "count": "13563"}, {"item": "-73.982249999999993", "count": "13190"}, {"item": "-73.982060000000004", "count": "12354"}, {"item": "-73.937349999999995", "count": "12235"}, {"item": "-73.982037000000005", "count": "12137"}, {"item": "-73.982107999999997", "count": "11989"}, {"item": "-73.982297000000003", "count": "11974"}, {"item": "-73.982273000000006", "count": "11602"}, {"item": "-73.982367999999994", "count": "11436"}, {"item": "-73.937687999999994", "count": "11237"}, {"item": "-73.982344999999995", "count": "11061"}, {"item": "-73.982155000000006", "count": "10874"}, {"item": "-73.982202000000001", "count": "10237"}, {"item": "-73.937475000000006", "count": "9966"}, {"item": "-73.981917999999993", "count": "9930"}, {"item": "-73.982294999999993", "count": "9929"}, {"item": "-73.982012999999995", "count": "9900"}], "not_null": "168994353", "smallest": "-3509.0150370000001", "count": "168994353", "cardinality": "460543"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610007, "name": "pickup_latitude", "fieldName": "pickup_latitude", "position": 7, "description": "Latitude where the meter was engaged.", "width": 280, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111170, "cachedContents": {"largest": "3377.9933350000001", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "3588208"}, {"item": "41.366137999999999", "count": "125840"}, {"item": "40.761200000000002", "count": "18479"}, {"item": "40.758114999999997", "count": "15925"}, {"item": "40.758127000000002", "count": "14866"}, {"item": "40.758242000000003", "count": "14014"}, {"item": "40.801963000000001", "count": "12601"}, {"item": "40.774093000000001", "count": "11070"}, {"item": "40.774056999999999", "count": "10790"}, {"item": "40.774075000000003", "count": "10734"}, {"item": "40.743755", "count": "9793"}, {"item": "40.778840000000002", "count": "9257"}, {"item": "40.761330000000001", "count": "8832"}, {"item": "40.750127999999997", "count": "8729"}, {"item": "40.774107999999998", "count": "8726"}, {"item": "40.774099999999997", "count": "8699"}, {"item": "40.774104999999999", "count": "8674"}, {"item": "40.774096999999998", "count": "8642"}, {"item": "40.774082", "count": "8629"}, {"item": "40.774101999999999", "count": "8555"}], "not_null": "168994353", "smallest": "-3579.1394129999999", "count": "168994353", "cardinality": "392819"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610008, "name": "ratecodeid", "fieldName": "ratecodeid", "position": 8, "description": "The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride", "width": 208, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111171, "cachedContents": {"largest": "96", "non_null": "168994353", "null": "0", "top": [{"item": "1", "count": "165664666"}, {"item": "2", "count": "2123880"}, {"item": "4", "count": "471214"}, {"item": "3", "count": "333304"}, {"item": "5", "count": "292181"}, {"item": "0", "count": "101138"}, {"item": "6", "count": "3108"}, {"item": "16", "count": "1563"}, {"item": "35", "count": "935"}, {"item": "24", "count": "715"}, {"item": "33", "count": "597"}, {"item": "128", "count": "550"}, {"item": "8", "count": "153"}, {"item": "34", "count": "152"}, {"item": "210", "count": "137"}, {"item": "11", "count": "12"}, {"item": "7", "count": "10"}, {"item": "9", "count": "5"}, {"item": "219", "count": "5"}, {"item": "64", "count": "4"}], "not_null": "168994353", "smallest": "0", "count": "168994353", "cardinality": "35"}, "format": {"align": "left"}, "flags": null}, {"id": 226610009, "name": "store_and_fwd_flag", "fieldName": "store_and_fwd_flag", "position": 9, "description": "This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka \u201cstore and forward,\u201d because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip", "width": 316, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111172, "cachedContents": {"largest": "Y", "non_null": "80606394", "null": "88387959", "top": [{"item": "0", "count": "45559630"}, {"item": "N", "count": "33751812"}, {"item": "1", "count": "789446"}, {"item": "Y", "count": "505504"}, {"item": "*", "count": "1"}, {"item": "2", "count": "1"}], "not_null": "80606394", "smallest": "*", "count": "168994353", "cardinality": "6"}, "format": {"align": "left"}, "flags": null}, {"id": 226610010, "name": "dropoff_longitude", "fieldName": "dropoff_longitude", "position": 10, "description": "Longitude where the meter was disengaged.", "width": 304, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111173, "cachedContents": {"largest": "3443.6514870000001", "non_null": "168994243", "null": "110", "top": [{"item": "0", "count": "3526961"}, {"item": "-73.137393000000003", "count": "96052"}, {"item": "-73.995807999999997", "count": "17235"}, {"item": "-73.951457000000005", "count": "13758"}, {"item": "-73.937349999999995", "count": "12347"}, {"item": "-73.937687999999994", "count": "11335"}, {"item": "-73.982249999999993", "count": "10237"}, {"item": "-73.937475000000006", "count": "10160"}, {"item": "-73.982367999999994", "count": "9980"}, {"item": "-73.982297000000003", "count": "9782"}, {"item": "-73.982037000000005", "count": "9523"}, {"item": "-73.982060000000004", "count": "9471"}, {"item": "-73.956220000000002", "count": "9416"}, {"item": "-73.982107999999997", "count": "9292"}, {"item": "-73.982273000000006", "count": "9196"}, {"item": "-73.982344999999995", "count": "9181"}, {"item": "-73.991228000000007", "count": "8680"}, {"item": "-73.982487000000006", "count": "8494"}, {"item": "-73.991416999999998", "count": "8492"}, {"item": "-73.978952000000007", "count": "8457"}], "not_null": "168994243", "smallest": "-3579.1394129999999", "count": "168994353", "cardinality": "545543"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610011, "name": "dropoff_latitude", "fieldName": "dropoff_latitude", "position": 11, "description": "Latitude where the meter was disengaged.", "width": 292, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111174, "cachedContents": {"largest": "3510.3806669999999", "non_null": "168994243", "null": "110", "top": [{"item": "0", "count": "3525729"}, {"item": "41.366137999999999", "count": "96052"}, {"item": "40.761200000000002", "count": "18571"}, {"item": "40.758114999999997", "count": "16256"}, {"item": "40.758127000000002", "count": "15120"}, {"item": "40.758242000000003", "count": "14339"}, {"item": "40.801963000000001", "count": "12863"}, {"item": "40.743755", "count": "9863"}, {"item": "40.750127999999997", "count": "9512"}, {"item": "40.761330000000001", "count": "9070"}, {"item": "40.778840000000002", "count": "9047"}, {"item": "40.745832999999998", "count": "7844"}, {"item": "40.750163000000001", "count": "7733"}, {"item": "40.750145000000003", "count": "7687"}, {"item": "40.750092000000002", "count": "7618"}, {"item": "40.750019999999999", "count": "7614"}, {"item": "40.750414999999997", "count": "7572"}, {"item": "40.762112000000002", "count": "7541"}, {"item": "40.750467999999998", "count": "7326"}, {"item": "40.750253000000001", "count": "7318"}], "not_null": "168994243", "smallest": "-3538.4323850000001", "count": "168994353", "cardinality": "457506"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610012, "name": "payment_type", "fieldName": "payment_type", "position": 12, "width": 244, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111175, "cachedContents": {"largest": "NOC", "non_null": "168994353", "null": "0", "top": [{"item": "CSH", "count": "50210641"}, {"item": "CRD", "count": "30829647"}, {"item": "CAS", "count": "30792006"}, {"item": "Cre", "count": "27416052"}, {"item": "Cas", "count": "26053917"}, {"item": "CRE", "count": "3369965"}, {"item": "No", "count": "200451"}, {"item": "Dis", "count": "43596"}, {"item": "NA", "count": "39986"}, {"item": "NOC", "count": "31817"}, {"item": "DIS", "count": "6275"}], "not_null": "168994353", "smallest": "Cas", "count": "168994353", "cardinality": "11"}, "format": {}, "flags": null}, {"id": 226610013, "name": "fare_amount", "fieldName": "fare_amount", "position": 13, "description": "The time-and-distance fare calculated by the meter.", "width": 232, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111176, "cachedContents": {"largest": "93960.070000000007", "non_null": "168994353", "null": "0", "top": [{"item": "5.2999999999999998", "count": "8908157"}, {"item": "5.7000000000000002", "count": "8855248"}, {"item": "4.9000000000000004", "count": "8638194"}, {"item": "6.0999999999999996", "count": "8614594"}, {"item": "6.5", "count": "8324492"}, {"item": "4.5", "count": "8013340"}, {"item": "6.9000000000000004", "count": "7829647"}, {"item": "7.2999999999999998", "count": "7383978"}, {"item": "7.7000000000000002", "count": "6861387"}, {"item": "4.0999999999999996", "count": "6533737"}, {"item": "8.0999999999999996", "count": "6339393"}, {"item": "8.5", "count": "5823013"}, {"item": "8.9000000000000004", "count": "5251340"}, {"item": "9.3000000000000007", "count": "4785448"}, {"item": "3.7000000000000002", "count": "4545260"}, {"item": "9.6999999999999993", "count": "4343980"}, {"item": "10.1", "count": "3947959"}, {"item": "10.5", "count": "3604505"}, {"item": "10.9", "count": "3259717"}, {"item": "11.300000000000001", "count": "2972183"}], "not_null": "168994353", "smallest": "-21474808", "count": "168994353", "cardinality": "4751"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610014, "name": "extra", "fieldName": "extra", "position": 14, "description": "Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.", "width": 208, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111177, "cachedContents": {"largest": "615.77999999999997", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "85627528"}, {"item": "0.5", "count": "57870622"}, {"item": "1", "count": "25437676"}, {"item": "1.5", "count": "48163"}, {"item": "-0.5", "count": "6903"}, {"item": "-1", "count": "2708"}, {"item": "2", "count": "116"}, {"item": "1.25", "count": "110"}, {"item": "2.75", "count": "80"}, {"item": "7.5", "count": "66"}, {"item": "1.8", "count": "52"}, {"item": "0.25", "count": "28"}, {"item": "40", "count": "18"}, {"item": "2.5", "count": "17"}, {"item": "0.050000000000000003", "count": "16"}, {"item": "2.25", "count": "16"}, {"item": "0.10000000000000001", "count": "15"}, {"item": "49.539999999999999", "count": "13"}, {"item": "8.75", "count": "12"}, {"item": "0.01", "count": "12"}], "not_null": "168994353", "smallest": "-1", "count": "168994353", "cardinality": "108"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610015, "name": "mta_tax", "fieldName": "mta_tax", "position": 15, "description": "$0.50 MTA tax that is automatically triggered based on the metered rate in use.", "width": 184, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111178, "cachedContents": {"largest": "1311.22", "non_null": "168994353", "null": "0", "top": [{"item": "0.5", "count": "167975957"}, {"item": "0", "count": "765605"}, {"item": "-1", "count": "235083"}, {"item": "-0.5", "count": "17490"}, {"item": "31.719999999999999", "count": "159"}, {"item": "0.59999999999999998", "count": "23"}, {"item": "48.539999999999999", "count": "17"}, {"item": "54.200000000000003", "count": "7"}, {"item": "68.629999999999995", "count": "3"}, {"item": "1311.22", "count": "1"}, {"item": "0.050000000000000003", "count": "1"}, {"item": "0.11", "count": "1"}, {"item": "0.55000000000000004", "count": "1"}, {"item": "0.69999999999999996", "count": "1"}, {"item": "1.78", "count": "1"}, {"item": "2.3799999999999999", "count": "1"}, {"item": "33.189999999999998", "count": "1"}, {"item": "614.89999999999998", "count": "1"}], "not_null": "168994353", "smallest": "-1", "count": "168994353", "cardinality": "18"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610016, "name": "tip_amount", "fieldName": "tip_amount", "position": 16, "description": "Tip amount \u2013 This field is automatically populated for credit card tips. Cash tips are not included.", "width": 220, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111179, "cachedContents": {"largest": "938.01999999999998", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "109026090"}, {"item": "1", "count": "12551546"}, {"item": "2", "count": "12356315"}, {"item": "1.5", "count": "3326705"}, {"item": "3", "count": "3291109"}, {"item": "4", "count": "847284"}, {"item": "1.2", "count": "652290"}, {"item": "5", "count": "616409"}, {"item": "1.3999999999999999", "count": "567495"}, {"item": "0.5", "count": "525304"}, {"item": "1.6000000000000001", "count": "482018"}, {"item": "2.5", "count": "459926"}, {"item": "1.8", "count": "455281"}, {"item": "1.25", "count": "404886"}, {"item": "1.3", "count": "397406"}, {"item": "1.1000000000000001", "count": "367826"}, {"item": "0.75", "count": "341447"}, {"item": "1.24", "count": "293946"}, {"item": "0.80000000000000004", "count": "280960"}, {"item": "1.8999999999999999", "count": "266546"}], "not_null": "168994353", "smallest": "-1677720.1000000001", "count": "168994353", "cardinality": "5237"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610017, "name": "tolls_amount", "fieldName": "tolls_amount", "position": 17, "description": "Total amount of all tolls paid in trip.", "width": 244, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111180, "cachedContents": {"largest": "5510.0699999999997", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "162715517"}, {"item": "4.5700000000000003", "count": "5378099"}, {"item": "5.5", "count": "415410"}, {"item": "8", "count": "122464"}, {"item": "2.0899999999999999", "count": "57773"}, {"item": "6", "count": "45060"}, {"item": "5", "count": "44214"}, {"item": "9.1400000000000006", "count": "29106"}, {"item": "4.7999999999999998", "count": "21576"}, {"item": "10", "count": "14337"}, {"item": "11", "count": "11655"}, {"item": "12", "count": "10787"}, {"item": "4.1500000000000004", "count": "9433"}, {"item": "0.5", "count": "9427"}, {"item": "13.710000000000001", "count": "9293"}, {"item": "1", "count": "8314"}, {"item": "12.57", "count": "8204"}, {"item": "3", "count": "5129"}, {"item": "1.71", "count": "3354"}, {"item": "13", "count": "2943"}], "not_null": "168994353", "smallest": "-21474836", "count": "168994353", "cardinality": "1821"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610018, "name": "total_amount", "fieldName": "total_amount", "position": 18, "description": "The total amount charged to passengers. Does not include cash tips.", "width": 244, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111181, "cachedContents": {"largest": "93960.570000000007", "non_null": "168994353", "null": "0", "top": [{"item": "7", "count": "3522516"}, {"item": "6.5999999999999996", "count": "3364339"}, {"item": "5.7999999999999998", "count": "3349842"}, {"item": "5.4000000000000004", "count": "3334594"}, {"item": "6.2000000000000002", "count": "3334387"}, {"item": "5", "count": "3276474"}, {"item": "7.4000000000000004", "count": "3066341"}, {"item": "7.7999999999999998", "count": "2923849"}, {"item": "9", "count": "2816032"}, {"item": "8.1999999999999993", "count": "2733458"}, {"item": "4.5999999999999996", "count": "2669052"}, {"item": "8.5999999999999996", "count": "2574445"}, {"item": "9.4000000000000004", "count": "2125387"}, {"item": "6.2999999999999998", "count": "2003338"}, {"item": "6.7000000000000002", "count": "1989212"}, {"item": "5.9000000000000004", "count": "1986909"}, {"item": "9.8000000000000007", "count": "1962501"}, {"item": "7.5", "count": "1959563"}, {"item": "7.0999999999999996", "count": "1956676"}, {"item": "4.2000000000000002", "count": "1952249"}], "not_null": "168994353", "smallest": "-21474830", "count": "168994353", "cardinality": "17049"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 228762010, "name": "pickup_location", "fieldName": "pickup_location", "position": 19, "width": 100, "dataTypeName": "point", "renderTypeName": "point", "tableColumnId": 32457116, "cachedContents": {"non_null": "168994353", "largest": "VTS", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {"align": "left"}, "flags": null}, {"id": 228762489, "name": "dropoff_location", "fieldName": "dropoff_location", "position": 20, "dataTypeName": "point", "renderTypeName": "point", "tableColumnId": 32457185, "cachedContents": {"non_null": "168994353", "largest": "VTS", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {}, "flags": null}], "commentUrl": null, "createdAt": "2015-10-19T20:30:20.000+00:00", "csvResourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.csv", "customMetadataFieldsets": [{"name": "Dataset Information", "fields": [{"type": "fixed", "required": false, "private": false, "options": ["311", "Administration for Children's Services (ACS)", "Alliance for Downtown New York", "Banking Commission", "Board of Correction (BOC)", "Board of Elections (BOENY)", "Board of Standards and Appeals (BSA)", "Bronx Borough President (BPBX)", "Brooklyn Borough President (BPBK)", "Brooklyn Public Library (BPL)", "Business Integrity Commission (BIC)", "Campaign Finance Board (CFB)", "City Clerk & Clerk of the Council (OCC)", "City Council (NYCC)", "City Employees' Retirement System (NYCERS)", "City University of New York (CUNY)", "Civil Service Commission", "Civilian Complaint Review Board (CCRB)", "Commission on Human Rights (CCHR)", "Commission on Women's Issues (CWI)", "Commission to Combat Police Corruption (CCPC)", "Community Boards", "Conflicts of Interest Board (COIB)", "Department for the Aging (NYC Aging)", "Department of Buildings (DOB)", "Department of City Planning (DCP)", "Department of Citywide Administrative Services (DCAS)", "Department of Consumer and Worker Protection (DCWP)", "Department of Correction (DOC)", "Department of Cultural Affairs (DCLA)", "Department of Design and Construction (DDC)", "Department of Education (DOE)", "Department of Environmental Protection (DEP)", "Department of Finance (DOF)", "Department of Health and Mental Hygiene (DOHMH)", "Department of Homeless Services (DHS)", "Department of Housing Preservation and Development (HPD)", "Department of Information Technology & Telecommunications (DoITT)", "Department of Investigation (DOI)", "Department of Parks and Recreation (DPR)", "Department of Probation (DOP)", "Department of Records and Information Services (DORIS)", "Department of Sanitation (DSNY)", "Department of Small Business Services (SBS)", "Department of Transportation (DOT)", "Department of Veterans\u2019 Services (DVS)", "Department of Youth and Community Development (DYCD)", "Economic Development Corporation (NYCEDC)", "Equal Employment Practices Commission (EEPC)", "Financial Information Services Agency (FISA)", "Fire Department Pension Fund & Related Funds", "Fire Department of New York City (FDNY)", "HHS Accelerator", "Human Resources Administration (HRA)", "Landmarks Preservation Commission (LPC)", "Latin Media & Entertainment Commission (LMEC)", "Law Department (LAW)", "Loft Board (LOFT)", "Manhattan Borough President (MBPO)", "Mayor's Community Affairs Unit (CAU)", "Mayor's Office for Economic Opportunity", "Mayor's Office of Adult Education (ADULTED)", "Mayor's Office of Climate Resiliency", "Mayor's Office of Climate and Environmental Justice (MOCEJ)", "Mayor's Office of Climate and Sustainability", "Mayor's Office of Contract Services (MOCS)", "Mayor's Office of Criminal Justice (MOCJ)", "Mayor's Office of Ethnic and Community Media (MOECM)", "Mayor's Office of Food Policy (MOFP)", "Mayor's Office of Housing Recovery Operations (HRO)", "Mayor's Office of Management & Budget (OMB)", "Mayor's Office of Media And Entertainment (MOME)", "Mayor's Office of Operations (OPS)", "Mayor's Office of Recovery and Resiliency", "Mayor's Office of Special Enforcement (OSE)", "Mayor's Office of the Chief Technology Officer (MOCTO)", "Mayor\u2019s Office of Community Mental Health (OCMH)", "Mayor\u2019s Office of Environmental Coordination (MOEC)", "Mayor\u2019s Office of Environmental Remediation (MOER)", "Mayor\u2019s Office of Immigrant Affairs (MOIA)", "Mayor\u2019s Office to End Domestic and Gender-Based Violence", "Metropolitan Transportation Authority (MTA)", "NYC & Company (NYCGO)", "NYC Civic Engagement Commission", "NYC Emergency Management (NYCEM)", "NYC Health + Hospitals", "NYC Independent Budget Office (IBO)", "NYC Media (MEDIA)", "NYC Service (NYCSERVICE)", "New York City Housing Authority (NYCHA)", "New York City Tax Commission (TAXCOMM)", "New York Public Library (NYPL)", "New York Public Library (NYPL)", "Office of Administrative Tax Appeals (OATA)", "Office of Administrative Trials and Hearings (OATH)", "Office of Chief Medical Examiner (OCME)", "Office of Citywide Event Coordination and Management (CECM)", "Office of Collective Bargaining (OCB)", "Office of Film, Theatre, and Broadcasting (FILM)", "Office of Labor Relations (OLR)", "Office of Payroll Administration (OPA)", "Office of Technology and Innovation (OTI)", "Office of the Actuary (ACTUARY)", "Office of the Comptroller (COMPTROLLER)", "Office of the Mayor (OTM)", "Other", "Police Department (NYPD)", "Police Pension Fund (NYCPPF)", "Port Authority of New York & New Jersey (PANYNJ)", "Procurement Policy Board (PPB)", "Public Design Commission (formerly Art Commission (ARTCOM) and Design Commission)", "Queens Borough President (QBP)", "Queens Library (QBPL)", "Rent Guidelines Board (RGB)", "School Construction Authority (SCA)", "Staten Island Borough President (BPSI)", "Tax Appeals Tribunal (TAT)", "Taxi and Limousine Commission (TLC)", "Teachers Retirement System (TRSNYC)"], "name": "Agency"}], "existing_fields": {"Agency": "Taxi and Limousine Commission (TLC)"}}, {"name": "Update", "fields": [{"type": "fixed", "required": true, "private": false, "options": ["Annually", "As needed", "Daily", "Every 10 years", "Every 2 months", "Every 2 weeks", "Every 2 years", "Every 3 years", "Every 4 months", "Every 4 years", "Every 5 years", "Every 6 months", "Every weekday", "Historical data", "Monthly", "Other", "Quarterly", "To be determined", "Weekly"], "name": "Update Frequency"}, {"type": "fixed", "required": true, "private": false, "options": ["Yes", "No"], "name": "Automation"}, {"required": false, "private": false, "name": "Date Made Public"}, {"required": false, "private": false, "name": "Update Frequency Details"}, {"required": false, "private": false, "name": "Data Change Frequency"}], "existing_fields": {"Automation": "No", "Date Made Public": "2/19/2016", "Update Frequency": "Historical data"}}], "dsmapiScheduledUpdates": {}, "dsmapiAutomationGuidance": {}, "description": "Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. <br /><br />This dataset includes trip records from all trips completed in yellow taxis in NYC in 2010.  Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP).  The  trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.", "disableContactDatasetOwner": true, "editMetadataUrl": null, "editUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/edit", "emailShareUrl": "mailto:?subject=2010 Yellow Taxi Trip Data&body=Here is a dataset from NYC Open Data that I would like to share with you: https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij", "exploreUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/explore", "exportFormats": ["csv", "csv_for_excel", "csv_for_excel_europe", "json", "rdf", "rss", "tsv_for_excel", "xml"], "facebookShareUrl": "http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij", "geoJsonResourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.geojson", "gridUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/data", "hasViewerGrant": true, "id": "74wj-s5ij", "isBlobby": false, "isHref": false, "isPrivate": false, "isTabular": true, "isUnpublished": false, "lastUpdatedAt": "2022-09-22T16:19:01.000+00:00", "licenseLink": null, "licenseLogo": null, "licenseName": null, "metadata": {"rdfClass": "", "rdfSubject": "0", "overrideLink": "https://s3-us-west-2.amazonaws.com/etl-raw.socrata.com/data.cityofnewyork.us/yellow_taxi_data_gzips/yellow_tripdata_2010.csv.gz", "custom_fields": {"Update": {"Automation": "No", "Date Made Public": "2/19/2016", "Update Frequency": "Historical data"}, "Dataset Information": {"Agency": "Taxi and Limousine Commission (TLC)"}}, "availableDisplayTypes": ["metadata_table", "table", "fatrow", "page"], "rowLabel": "", "renderTypeConfig": {"visible": {"metadata_table": true, "table": true}}, "flags": []}, "name": "2010 Yellow Taxi Trip Data", "namedResourceUrl": null, "openRevisions": [], "odataUrl": "https://data.cityofnewyork.us/OData.svc/74wj-s5ij", "odataUrlV4": "https://data.cityofnewyork.us/api/odata/v4/74wj-s5ij", "ownerName": "NYC OpenData", "permissions": null, "plotlyUrl": "https://data.cityofnewyork.us/api/views/74wj-s5ij/rows.json", "provenance": "official", "resourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.json", "rowLabel": "", "rowLabelMultiple": "", "tags": null, "twitterShareUrl": "http://twitter.com/share?text=2010%20Yellow%20Taxi%20Trip%20Data%20%7C%20NYC%20Open%20Data&url=https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij", "viewCount": 310, "coreView": {"id": "74wj-s5ij", "name": "2010 Yellow Taxi Trip Data", "assetType": "dataset", "attribution": "Taxi and Limousine Commission (TLC)", "averageRating": 0.0, "category": "Transportation", "createdAt": 1445286620, "description": "Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. \r\n\r\nThis dataset includes trip records from all trips completed in yellow taxis in NYC in 2010.  Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP).  The  trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.", "displayType": "table", "domainCName": "data.cityofnewyork.us", "downloadCount": 199, "hideFromCatalog": false, "hideFromDataJson": false, "indexUpdatedAt": 1573153558, "newBackend": true, "numberOfComments": 0, "oid": 14108575, "provenance": "official", "publicationAppendEnabled": false, "publicationDate": 1449535715, "publicationGroup": 4957555, "publicationStage": "published", "rowClass": "", "rowsUpdatedAt": 1449452507, "rowsUpdatedBy": "8ibz-n25n", "tableId": 4957555, "totalTimesRated": 0, "viewCount": 310, "viewLastModified": 1663863541, "viewType": "tabular", "approvals": [{"reviewedAt": 1654530121, "reviewedAutomatically": true, "state": "approved", "submissionId": 4743164, "submissionObject": "public_audience_request", "submissionOutcome": "change_audience", "submittedAt": 1654530121, "targetAudience": "public", "workflowId": 2285, "submissionDetails": {"permissionType": "READ"}, "submissionOutcomeApplication": {"endedAt": 1654530121, "failureCount": 0, "startedAt": 1654530121, "status": "success"}, "submitter": {"id": "axdq-ndzv", "displayName": "Y"}}], "clientContext": {"clientContextVariables": [], "inheritedVariables": {}}, "columns": [{"id": 226610001, "name": "vendorid", "fieldName": "vendorid", "position": 1, "description": "A designation for the technology vendor that provided the record. CMT=Creative Mobile Technologies VTS= VeriFone, Inc. DDS=Digital Dispatch Systems", "width": 208, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111164, "cachedContents": {"largest": "VTS", "non_null": "168994353", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "not_null": "168994353", "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {"align": "left"}, "flags": null}, {"id": 226610002, "name": "tpep_pickup_datetime", "fieldName": "tpep_pickup_datetime", "position": 2, "description": "The date and time when the meter was engaged.", "width": 280, "dataTypeName": "calendar_date", "renderTypeName": "calendar_date", "tableColumnId": 32111165, "cachedContents": {"largest": "2011-02-22T21:01:27.000", "non_null": "168994353", "null": "0", "top": [{"item": "2010-11-07T01:00:00.000", "count": "522"}, {"item": "2010-11-07T01:10:00.000", "count": "501"}, {"item": "2010-11-07T01:01:00.000", "count": "501"}, {"item": "2010-11-07T01:30:00.000", "count": "500"}, {"item": "2010-11-07T01:02:00.000", "count": "499"}, {"item": "2010-11-07T01:13:00.000", "count": "499"}, {"item": "2010-11-07T01:09:00.000", "count": "490"}, {"item": "2010-11-07T01:33:00.000", "count": "490"}, {"item": "2010-11-07T01:05:00.000", "count": "489"}, {"item": "2010-11-07T01:07:00.000", "count": "489"}, {"item": "2010-11-07T01:15:00.000", "count": "488"}, {"item": "2010-11-07T01:16:00.000", "count": "485"}, {"item": "2010-11-07T01:37:00.000", "count": "483"}, {"item": "2010-11-07T01:17:00.000", "count": "481"}, {"item": "2010-11-07T01:08:00.000", "count": "476"}, {"item": "2010-11-07T01:19:00.000", "count": "474"}, {"item": "2010-11-07T01:53:00.000", "count": "473"}, {"item": "2010-11-07T01:14:00.000", "count": "473"}, {"item": "2010-11-07T01:40:00.000", "count": "472"}, {"item": "2010-11-07T01:35:00.000", "count": "468"}], "not_null": "168994353", "smallest": "2010-01-01T00:00:00.000", "count": "168994353", "cardinality": "26753988"}, "format": {"view": "date_time", "align": "left"}, "flags": null}, {"id": 226610003, "name": "dropoff_datetime", "fieldName": "dropoff_datetime", "position": 3, "description": "The date and time when the meter was disengaged.", "width": 292, "dataTypeName": "calendar_date", "renderTypeName": "calendar_date", "tableColumnId": 32111166, "cachedContents": {"largest": "2011-05-09T23:40:38.000", "non_null": "168994353", "null": "0", "top": [{"item": "2010-11-07T01:39:00.000", "count": "500"}, {"item": "2010-11-07T01:21:00.000", "count": "496"}, {"item": "2010-11-07T01:23:00.000", "count": "495"}, {"item": "2010-11-07T01:26:00.000", "count": "493"}, {"item": "2010-11-07T01:34:00.000", "count": "491"}, {"item": "2010-11-07T01:27:00.000", "count": "488"}, {"item": "2010-11-07T01:29:00.000", "count": "487"}, {"item": "2010-11-07T01:36:00.000", "count": "481"}, {"item": "2010-11-07T01:53:00.000", "count": "481"}, {"item": "2010-11-07T01:35:00.000", "count": "480"}, {"item": "2010-11-07T01:43:00.000", "count": "477"}, {"item": "2010-11-07T01:44:00.000", "count": "473"}, {"item": "2010-11-07T01:45:00.000", "count": "473"}, {"item": "2010-11-07T01:40:00.000", "count": "471"}, {"item": "2010-11-07T01:22:00.000", "count": "471"}, {"item": "2010-11-07T01:46:00.000", "count": "468"}, {"item": "2010-11-07T01:55:00.000", "count": "468"}, {"item": "2010-11-07T01:28:00.000", "count": "467"}, {"item": "2010-11-07T01:37:00.000", "count": "467"}, {"item": "2010-11-07T02:00:00.000", "count": "465"}], "not_null": "168994353", "smallest": "2010-01-01T00:00:00.000", "count": "168994353", "cardinality": "26772452"}, "format": {"view": "date_time", "align": "left"}, "flags": null}, {"id": 226610004, "name": "passenger_count", "fieldName": "passenger_count", "position": 4, "description": "The number of passengers in the vehicle. This is a driver-entered value.", "width": 280, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111167, "cachedContents": {"largest": "255", "non_null": "168994353", "null": "0", "top": [{"item": "1", "count": "115776112"}, {"item": "2", "count": "26793220"}, {"item": "5", "count": "14217357"}, {"item": "3", "count": "7710551"}, {"item": "4", "count": "3770213"}, {"item": "6", "count": "690626"}, {"item": "0", "count": "35640"}, {"item": "208", "count": "603"}, {"item": "7", "count": "4"}, {"item": "9", "count": "3"}, {"item": "10", "count": "3"}, {"item": "255", "count": "2"}, {"item": "250", "count": "2"}, {"item": "34", "count": "1"}, {"item": "51", "count": "1"}, {"item": "58", "count": "1"}, {"item": "65", "count": "1"}, {"item": "91", "count": "1"}, {"item": "125", "count": "1"}, {"item": "133", "count": "1"}], "not_null": "168994353", "smallest": "0", "count": "168994353", "cardinality": "30"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610005, "name": "trip_distance", "fieldName": "trip_distance", "position": 5, "description": "The elapsed trip distance in miles reported by the taximeter.", "width": 256, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111168, "cachedContents": {"largest": "16201631.4", "non_null": "168994353", "null": "0", "top": [{"item": "0.90000000000000002", "count": "3919921"}, {"item": "1", "count": "3905340"}, {"item": "0.80000000000000004", "count": "3846907"}, {"item": "1.1000000000000001", "count": "3777055"}, {"item": "1.2", "count": "3610784"}, {"item": "0.69999999999999996", "count": "3589731"}, {"item": "1.3", "count": "3415190"}, {"item": "1.3999999999999999", "count": "3247462"}, {"item": "0.59999999999999998", "count": "3125865"}, {"item": "1.5", "count": "3059544"}, {"item": "1.6000000000000001", "count": "2890587"}, {"item": "1.7", "count": "2701717"}, {"item": "1.8", "count": "2528002"}, {"item": "0.5", "count": "2456244"}, {"item": "1.8999999999999999", "count": "2360102"}, {"item": "2", "count": "2200941"}, {"item": "2.1000000000000001", "count": "2047060"}, {"item": "2.2000000000000002", "count": "1903357"}, {"item": "2.2999999999999998", "count": "1769706"}, {"item": "0.40000000000000002", "count": "1657373"}], "not_null": "168994353", "smallest": "-21474834", "count": "168994353", "cardinality": "6667"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610006, "name": "pickup_longitude", "fieldName": "pickup_longitude", "position": 6, "description": "Longitude where the meter was engaged.", "width": 292, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111169, "cachedContents": {"largest": "3569.9308500000002", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "3589321"}, {"item": "-73.137393000000003", "count": "125840"}, {"item": "-73.995807999999997", "count": "17623"}, {"item": "-73.951457000000005", "count": "13563"}, {"item": "-73.982249999999993", "count": "13190"}, {"item": "-73.982060000000004", "count": "12354"}, {"item": "-73.937349999999995", "count": "12235"}, {"item": "-73.982037000000005", "count": "12137"}, {"item": "-73.982107999999997", "count": "11989"}, {"item": "-73.982297000000003", "count": "11974"}, {"item": "-73.982273000000006", "count": "11602"}, {"item": "-73.982367999999994", "count": "11436"}, {"item": "-73.937687999999994", "count": "11237"}, {"item": "-73.982344999999995", "count": "11061"}, {"item": "-73.982155000000006", "count": "10874"}, {"item": "-73.982202000000001", "count": "10237"}, {"item": "-73.937475000000006", "count": "9966"}, {"item": "-73.981917999999993", "count": "9930"}, {"item": "-73.982294999999993", "count": "9929"}, {"item": "-73.982012999999995", "count": "9900"}], "not_null": "168994353", "smallest": "-3509.0150370000001", "count": "168994353", "cardinality": "460543"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610007, "name": "pickup_latitude", "fieldName": "pickup_latitude", "position": 7, "description": "Latitude where the meter was engaged.", "width": 280, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111170, "cachedContents": {"largest": "3377.9933350000001", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "3588208"}, {"item": "41.366137999999999", "count": "125840"}, {"item": "40.761200000000002", "count": "18479"}, {"item": "40.758114999999997", "count": "15925"}, {"item": "40.758127000000002", "count": "14866"}, {"item": "40.758242000000003", "count": "14014"}, {"item": "40.801963000000001", "count": "12601"}, {"item": "40.774093000000001", "count": "11070"}, {"item": "40.774056999999999", "count": "10790"}, {"item": "40.774075000000003", "count": "10734"}, {"item": "40.743755", "count": "9793"}, {"item": "40.778840000000002", "count": "9257"}, {"item": "40.761330000000001", "count": "8832"}, {"item": "40.750127999999997", "count": "8729"}, {"item": "40.774107999999998", "count": "8726"}, {"item": "40.774099999999997", "count": "8699"}, {"item": "40.774104999999999", "count": "8674"}, {"item": "40.774096999999998", "count": "8642"}, {"item": "40.774082", "count": "8629"}, {"item": "40.774101999999999", "count": "8555"}], "not_null": "168994353", "smallest": "-3579.1394129999999", "count": "168994353", "cardinality": "392819"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610008, "name": "ratecodeid", "fieldName": "ratecodeid", "position": 8, "description": "The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride", "width": 208, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111171, "cachedContents": {"largest": "96", "non_null": "168994353", "null": "0", "top": [{"item": "1", "count": "165664666"}, {"item": "2", "count": "2123880"}, {"item": "4", "count": "471214"}, {"item": "3", "count": "333304"}, {"item": "5", "count": "292181"}, {"item": "0", "count": "101138"}, {"item": "6", "count": "3108"}, {"item": "16", "count": "1563"}, {"item": "35", "count": "935"}, {"item": "24", "count": "715"}, {"item": "33", "count": "597"}, {"item": "128", "count": "550"}, {"item": "8", "count": "153"}, {"item": "34", "count": "152"}, {"item": "210", "count": "137"}, {"item": "11", "count": "12"}, {"item": "7", "count": "10"}, {"item": "9", "count": "5"}, {"item": "219", "count": "5"}, {"item": "64", "count": "4"}], "not_null": "168994353", "smallest": "0", "count": "168994353", "cardinality": "35"}, "format": {"align": "left"}, "flags": null}, {"id": 226610009, "name": "store_and_fwd_flag", "fieldName": "store_and_fwd_flag", "position": 9, "description": "This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka \u201cstore and forward,\u201d because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip", "width": 316, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111172, "cachedContents": {"largest": "Y", "non_null": "80606394", "null": "88387959", "top": [{"item": "0", "count": "45559630"}, {"item": "N", "count": "33751812"}, {"item": "1", "count": "789446"}, {"item": "Y", "count": "505504"}, {"item": "*", "count": "1"}, {"item": "2", "count": "1"}], "not_null": "80606394", "smallest": "*", "count": "168994353", "cardinality": "6"}, "format": {"align": "left"}, "flags": null}, {"id": 226610010, "name": "dropoff_longitude", "fieldName": "dropoff_longitude", "position": 10, "description": "Longitude where the meter was disengaged.", "width": 304, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111173, "cachedContents": {"largest": "3443.6514870000001", "non_null": "168994243", "null": "110", "top": [{"item": "0", "count": "3526961"}, {"item": "-73.137393000000003", "count": "96052"}, {"item": "-73.995807999999997", "count": "17235"}, {"item": "-73.951457000000005", "count": "13758"}, {"item": "-73.937349999999995", "count": "12347"}, {"item": "-73.937687999999994", "count": "11335"}, {"item": "-73.982249999999993", "count": "10237"}, {"item": "-73.937475000000006", "count": "10160"}, {"item": "-73.982367999999994", "count": "9980"}, {"item": "-73.982297000000003", "count": "9782"}, {"item": "-73.982037000000005", "count": "9523"}, {"item": "-73.982060000000004", "count": "9471"}, {"item": "-73.956220000000002", "count": "9416"}, {"item": "-73.982107999999997", "count": "9292"}, {"item": "-73.982273000000006", "count": "9196"}, {"item": "-73.982344999999995", "count": "9181"}, {"item": "-73.991228000000007", "count": "8680"}, {"item": "-73.982487000000006", "count": "8494"}, {"item": "-73.991416999999998", "count": "8492"}, {"item": "-73.978952000000007", "count": "8457"}], "not_null": "168994243", "smallest": "-3579.1394129999999", "count": "168994353", "cardinality": "545543"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610011, "name": "dropoff_latitude", "fieldName": "dropoff_latitude", "position": 11, "description": "Latitude where the meter was disengaged.", "width": 292, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111174, "cachedContents": {"largest": "3510.3806669999999", "non_null": "168994243", "null": "110", "top": [{"item": "0", "count": "3525729"}, {"item": "41.366137999999999", "count": "96052"}, {"item": "40.761200000000002", "count": "18571"}, {"item": "40.758114999999997", "count": "16256"}, {"item": "40.758127000000002", "count": "15120"}, {"item": "40.758242000000003", "count": "14339"}, {"item": "40.801963000000001", "count": "12863"}, {"item": "40.743755", "count": "9863"}, {"item": "40.750127999999997", "count": "9512"}, {"item": "40.761330000000001", "count": "9070"}, {"item": "40.778840000000002", "count": "9047"}, {"item": "40.745832999999998", "count": "7844"}, {"item": "40.750163000000001", "count": "7733"}, {"item": "40.750145000000003", "count": "7687"}, {"item": "40.750092000000002", "count": "7618"}, {"item": "40.750019999999999", "count": "7614"}, {"item": "40.750414999999997", "count": "7572"}, {"item": "40.762112000000002", "count": "7541"}, {"item": "40.750467999999998", "count": "7326"}, {"item": "40.750253000000001", "count": "7318"}], "not_null": "168994243", "smallest": "-3538.4323850000001", "count": "168994353", "cardinality": "457506"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610012, "name": "payment_type", "fieldName": "payment_type", "position": 12, "width": 244, "dataTypeName": "text", "renderTypeName": "text", "tableColumnId": 32111175, "cachedContents": {"largest": "NOC", "non_null": "168994353", "null": "0", "top": [{"item": "CSH", "count": "50210641"}, {"item": "CRD", "count": "30829647"}, {"item": "CAS", "count": "30792006"}, {"item": "Cre", "count": "27416052"}, {"item": "Cas", "count": "26053917"}, {"item": "CRE", "count": "3369965"}, {"item": "No", "count": "200451"}, {"item": "Dis", "count": "43596"}, {"item": "NA", "count": "39986"}, {"item": "NOC", "count": "31817"}, {"item": "DIS", "count": "6275"}], "not_null": "168994353", "smallest": "Cas", "count": "168994353", "cardinality": "11"}, "format": {}, "flags": null}, {"id": 226610013, "name": "fare_amount", "fieldName": "fare_amount", "position": 13, "description": "The time-and-distance fare calculated by the meter.", "width": 232, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111176, "cachedContents": {"largest": "93960.070000000007", "non_null": "168994353", "null": "0", "top": [{"item": "5.2999999999999998", "count": "8908157"}, {"item": "5.7000000000000002", "count": "8855248"}, {"item": "4.9000000000000004", "count": "8638194"}, {"item": "6.0999999999999996", "count": "8614594"}, {"item": "6.5", "count": "8324492"}, {"item": "4.5", "count": "8013340"}, {"item": "6.9000000000000004", "count": "7829647"}, {"item": "7.2999999999999998", "count": "7383978"}, {"item": "7.7000000000000002", "count": "6861387"}, {"item": "4.0999999999999996", "count": "6533737"}, {"item": "8.0999999999999996", "count": "6339393"}, {"item": "8.5", "count": "5823013"}, {"item": "8.9000000000000004", "count": "5251340"}, {"item": "9.3000000000000007", "count": "4785448"}, {"item": "3.7000000000000002", "count": "4545260"}, {"item": "9.6999999999999993", "count": "4343980"}, {"item": "10.1", "count": "3947959"}, {"item": "10.5", "count": "3604505"}, {"item": "10.9", "count": "3259717"}, {"item": "11.300000000000001", "count": "2972183"}], "not_null": "168994353", "smallest": "-21474808", "count": "168994353", "cardinality": "4751"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610014, "name": "extra", "fieldName": "extra", "position": 14, "description": "Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.", "width": 208, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111177, "cachedContents": {"largest": "615.77999999999997", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "85627528"}, {"item": "0.5", "count": "57870622"}, {"item": "1", "count": "25437676"}, {"item": "1.5", "count": "48163"}, {"item": "-0.5", "count": "6903"}, {"item": "-1", "count": "2708"}, {"item": "2", "count": "116"}, {"item": "1.25", "count": "110"}, {"item": "2.75", "count": "80"}, {"item": "7.5", "count": "66"}, {"item": "1.8", "count": "52"}, {"item": "0.25", "count": "28"}, {"item": "40", "count": "18"}, {"item": "2.5", "count": "17"}, {"item": "0.050000000000000003", "count": "16"}, {"item": "2.25", "count": "16"}, {"item": "0.10000000000000001", "count": "15"}, {"item": "49.539999999999999", "count": "13"}, {"item": "8.75", "count": "12"}, {"item": "0.01", "count": "12"}], "not_null": "168994353", "smallest": "-1", "count": "168994353", "cardinality": "108"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610015, "name": "mta_tax", "fieldName": "mta_tax", "position": 15, "description": "$0.50 MTA tax that is automatically triggered based on the metered rate in use.", "width": 184, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111178, "cachedContents": {"largest": "1311.22", "non_null": "168994353", "null": "0", "top": [{"item": "0.5", "count": "167975957"}, {"item": "0", "count": "765605"}, {"item": "-1", "count": "235083"}, {"item": "-0.5", "count": "17490"}, {"item": "31.719999999999999", "count": "159"}, {"item": "0.59999999999999998", "count": "23"}, {"item": "48.539999999999999", "count": "17"}, {"item": "54.200000000000003", "count": "7"}, {"item": "68.629999999999995", "count": "3"}, {"item": "1311.22", "count": "1"}, {"item": "0.050000000000000003", "count": "1"}, {"item": "0.11", "count": "1"}, {"item": "0.55000000000000004", "count": "1"}, {"item": "0.69999999999999996", "count": "1"}, {"item": "1.78", "count": "1"}, {"item": "2.3799999999999999", "count": "1"}, {"item": "33.189999999999998", "count": "1"}, {"item": "614.89999999999998", "count": "1"}], "not_null": "168994353", "smallest": "-1", "count": "168994353", "cardinality": "18"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610016, "name": "tip_amount", "fieldName": "tip_amount", "position": 16, "description": "Tip amount \u2013 This field is automatically populated for credit card tips. Cash tips are not included.", "width": 220, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111179, "cachedContents": {"largest": "938.01999999999998", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "109026090"}, {"item": "1", "count": "12551546"}, {"item": "2", "count": "12356315"}, {"item": "1.5", "count": "3326705"}, {"item": "3", "count": "3291109"}, {"item": "4", "count": "847284"}, {"item": "1.2", "count": "652290"}, {"item": "5", "count": "616409"}, {"item": "1.3999999999999999", "count": "567495"}, {"item": "0.5", "count": "525304"}, {"item": "1.6000000000000001", "count": "482018"}, {"item": "2.5", "count": "459926"}, {"item": "1.8", "count": "455281"}, {"item": "1.25", "count": "404886"}, {"item": "1.3", "count": "397406"}, {"item": "1.1000000000000001", "count": "367826"}, {"item": "0.75", "count": "341447"}, {"item": "1.24", "count": "293946"}, {"item": "0.80000000000000004", "count": "280960"}, {"item": "1.8999999999999999", "count": "266546"}], "not_null": "168994353", "smallest": "-1677720.1000000001", "count": "168994353", "cardinality": "5237"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610017, "name": "tolls_amount", "fieldName": "tolls_amount", "position": 17, "description": "Total amount of all tolls paid in trip.", "width": 244, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111180, "cachedContents": {"largest": "5510.0699999999997", "non_null": "168994353", "null": "0", "top": [{"item": "0", "count": "162715517"}, {"item": "4.5700000000000003", "count": "5378099"}, {"item": "5.5", "count": "415410"}, {"item": "8", "count": "122464"}, {"item": "2.0899999999999999", "count": "57773"}, {"item": "6", "count": "45060"}, {"item": "5", "count": "44214"}, {"item": "9.1400000000000006", "count": "29106"}, {"item": "4.7999999999999998", "count": "21576"}, {"item": "10", "count": "14337"}, {"item": "11", "count": "11655"}, {"item": "12", "count": "10787"}, {"item": "4.1500000000000004", "count": "9433"}, {"item": "0.5", "count": "9427"}, {"item": "13.710000000000001", "count": "9293"}, {"item": "1", "count": "8314"}, {"item": "12.57", "count": "8204"}, {"item": "3", "count": "5129"}, {"item": "1.71", "count": "3354"}, {"item": "13", "count": "2943"}], "not_null": "168994353", "smallest": "-21474836", "count": "168994353", "cardinality": "1821"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 226610018, "name": "total_amount", "fieldName": "total_amount", "position": 18, "description": "The total amount charged to passengers. Does not include cash tips.", "width": 244, "dataTypeName": "number", "renderTypeName": "number", "tableColumnId": 32111181, "cachedContents": {"largest": "93960.570000000007", "non_null": "168994353", "null": "0", "top": [{"item": "7", "count": "3522516"}, {"item": "6.5999999999999996", "count": "3364339"}, {"item": "5.7999999999999998", "count": "3349842"}, {"item": "5.4000000000000004", "count": "3334594"}, {"item": "6.2000000000000002", "count": "3334387"}, {"item": "5", "count": "3276474"}, {"item": "7.4000000000000004", "count": "3066341"}, {"item": "7.7999999999999998", "count": "2923849"}, {"item": "9", "count": "2816032"}, {"item": "8.1999999999999993", "count": "2733458"}, {"item": "4.5999999999999996", "count": "2669052"}, {"item": "8.5999999999999996", "count": "2574445"}, {"item": "9.4000000000000004", "count": "2125387"}, {"item": "6.2999999999999998", "count": "2003338"}, {"item": "6.7000000000000002", "count": "1989212"}, {"item": "5.9000000000000004", "count": "1986909"}, {"item": "9.8000000000000007", "count": "1962501"}, {"item": "7.5", "count": "1959563"}, {"item": "7.0999999999999996", "count": "1956676"}, {"item": "4.2000000000000002", "count": "1952249"}], "not_null": "168994353", "smallest": "-21474830", "count": "168994353", "cardinality": "17049"}, "format": {"precisionStyle": "standard", "noCommas": "false", "align": "right"}, "flags": null}, {"id": 228762010, "name": "pickup_location", "fieldName": "pickup_location", "position": 19, "width": 100, "dataTypeName": "point", "renderTypeName": "point", "tableColumnId": 32457116, "cachedContents": {"non_null": "168994353", "largest": "VTS", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {"align": "left"}, "flags": null}, {"id": 228762489, "name": "dropoff_location", "fieldName": "dropoff_location", "position": 20, "dataTypeName": "point", "renderTypeName": "point", "tableColumnId": 32457185, "cachedContents": {"non_null": "168994353", "largest": "VTS", "null": "0", "top": [{"item": "VTS", "count": "84325280"}, {"item": "CMT", "count": "80618790"}, {"item": "DDS", "count": "4050283"}], "smallest": "CMT", "count": "168994353", "cardinality": "3"}, "format": {}, "flags": null}], "grants": [{"inherited": false, "type": "viewer", "flags": ["public"]}], "metadata": {"rdfClass": "", "rdfSubject": "0", "overrideLink": "https://s3-us-west-2.amazonaws.com/etl-raw.socrata.com/data.cityofnewyork.us/yellow_taxi_data_gzips/yellow_tripdata_2010.csv.gz", "custom_fields": {"Update": {"Automation": "No", "Date Made Public": "2/19/2016", "Update Frequency": "Historical data"}, "Dataset Information": {"Agency": "Taxi and Limousine Commission (TLC)"}}, "availableDisplayTypes": ["metadata_table", "table", "fatrow", "page"], "rowLabel": "", "renderTypeConfig": {"visible": {"metadata_table": true, "table": true}}}, "owner": {"id": "5fuc-pqz2", "displayName": "NYC OpenData", "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE", "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB", "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY", "screenName": "NYC OpenData", "type": "interactive", "flags": ["acceptedEula", "mayBeStoriesCoOwner"]}, "query": {}, "rights": ["read"], "tableAuthor": {"id": "5fuc-pqz2", "displayName": "NYC OpenData", "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE", "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB", "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY", "screenName": "NYC OpenData", "type": "interactive", "flags": ["acceptedEula", "mayBeStoriesCoOwner"]}, "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"], "computedColumns": []}}, "relatedViews": [{"name": "2010 Yellow Taxi Trip Data", "id": "ry9a-ubra", "description": "<div>Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. This dataset includes trip records from all trips completed in yellow taxis in NYC in 2010. Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP). The trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.<br></div><div>Data Dictionary for this dataset can be found here: <a href=\"http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf\">http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf</a><br></div><div><br></div>", "url": "https://data.cityofnewyork.us/Transportation/2010-Yellow-Taxi-Trip-Data/ry9a-ubra", "displayType": "data_lens", "isFederated": false, "createdAt": "2016-01-07T14:07:15.000Z", "updatedAt": "2018-09-11T16:50:16.000Z", "viewCount": 3890, "isPrivate": false, "imageUrl": "https://data.cityofnewyork.us/views/ry9a-ubra/files/ac6f26a3-7ba0-40c8-a585-386e471479a6", "scope": "public", "sourceDomain": "data.cityofnewyork.us"}], "featuredContent": [], "websocketToken": null}
+{
+  "view": {
+    "allAccessPoints": [],
+    "apiFoundryUrl": "https://dev.socrata.com/foundry/data.cityofnewyork.us/74wj-s5ij",
+    "attachments": null,
+    "attribution": "Taxi and Limousine Commission (TLC)",
+    "attributionLink": null,
+    "blobFilename": null,
+    "blobId": null,
+    "blobMimeType": null,
+    "blobType": false,
+    "bootstrapUrl": "/d/74wj-s5ij/visualization",
+    "canPublish": false,
+    "cartoUrl": "http://oneclick.cartodb.com/?file=https://data.cityofnewyork.us/api/views/74wj-s5ij/rows.geojson?accessType=DOWNLOAD",
+    "category": "Transportation",
+    "collectionParentView": null,
+    "parentView": null,
+    "columns": [
+      {
+        "id": 226610001,
+        "name": "vendorid",
+        "fieldName": "vendorid",
+        "position": 1,
+        "description": "A designation for the technology vendor that provided the record. CMT=Creative Mobile Technologies VTS= VeriFone, Inc. DDS=Digital Dispatch Systems",
+        "width": 208,
+        "dataTypeName": "text",
+        "renderTypeName": "text",
+        "tableColumnId": 32111164,
+        "cachedContents": {
+          "largest": "VTS",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "VTS",
+              "count": "84325280"
+            },
+            {
+              "item": "CMT",
+              "count": "80618790"
+            },
+            {
+              "item": "DDS",
+              "count": "4050283"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "CMT",
+          "count": "168994353",
+          "cardinality": "3"
+        },
+        "format": {
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610002,
+        "name": "tpep_pickup_datetime",
+        "fieldName": "tpep_pickup_datetime",
+        "position": 2,
+        "description": "The date and time when the meter was engaged.",
+        "width": 280,
+        "dataTypeName": "calendar_date",
+        "renderTypeName": "calendar_date",
+        "tableColumnId": 32111165,
+        "cachedContents": {
+          "largest": "2011-02-22T21:01:27.000",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "2010-11-07T01:00:00.000",
+              "count": "522"
+            },
+            {
+              "item": "2010-11-07T01:10:00.000",
+              "count": "501"
+            },
+            {
+              "item": "2010-11-07T01:01:00.000",
+              "count": "501"
+            },
+            {
+              "item": "2010-11-07T01:30:00.000",
+              "count": "500"
+            },
+            {
+              "item": "2010-11-07T01:02:00.000",
+              "count": "499"
+            },
+            {
+              "item": "2010-11-07T01:13:00.000",
+              "count": "499"
+            },
+            {
+              "item": "2010-11-07T01:09:00.000",
+              "count": "490"
+            },
+            {
+              "item": "2010-11-07T01:33:00.000",
+              "count": "490"
+            },
+            {
+              "item": "2010-11-07T01:05:00.000",
+              "count": "489"
+            },
+            {
+              "item": "2010-11-07T01:07:00.000",
+              "count": "489"
+            },
+            {
+              "item": "2010-11-07T01:15:00.000",
+              "count": "488"
+            },
+            {
+              "item": "2010-11-07T01:16:00.000",
+              "count": "485"
+            },
+            {
+              "item": "2010-11-07T01:37:00.000",
+              "count": "483"
+            },
+            {
+              "item": "2010-11-07T01:17:00.000",
+              "count": "481"
+            },
+            {
+              "item": "2010-11-07T01:08:00.000",
+              "count": "476"
+            },
+            {
+              "item": "2010-11-07T01:19:00.000",
+              "count": "474"
+            },
+            {
+              "item": "2010-11-07T01:53:00.000",
+              "count": "473"
+            },
+            {
+              "item": "2010-11-07T01:14:00.000",
+              "count": "473"
+            },
+            {
+              "item": "2010-11-07T01:40:00.000",
+              "count": "472"
+            },
+            {
+              "item": "2010-11-07T01:35:00.000",
+              "count": "468"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "2010-01-01T00:00:00.000",
+          "count": "168994353",
+          "cardinality": "26753988"
+        },
+        "format": {
+          "view": "date_time",
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610003,
+        "name": "dropoff_datetime",
+        "fieldName": "dropoff_datetime",
+        "position": 3,
+        "description": "The date and time when the meter was disengaged.",
+        "width": 292,
+        "dataTypeName": "calendar_date",
+        "renderTypeName": "calendar_date",
+        "tableColumnId": 32111166,
+        "cachedContents": {
+          "largest": "2011-05-09T23:40:38.000",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "2010-11-07T01:39:00.000",
+              "count": "500"
+            },
+            {
+              "item": "2010-11-07T01:21:00.000",
+              "count": "496"
+            },
+            {
+              "item": "2010-11-07T01:23:00.000",
+              "count": "495"
+            },
+            {
+              "item": "2010-11-07T01:26:00.000",
+              "count": "493"
+            },
+            {
+              "item": "2010-11-07T01:34:00.000",
+              "count": "491"
+            },
+            {
+              "item": "2010-11-07T01:27:00.000",
+              "count": "488"
+            },
+            {
+              "item": "2010-11-07T01:29:00.000",
+              "count": "487"
+            },
+            {
+              "item": "2010-11-07T01:36:00.000",
+              "count": "481"
+            },
+            {
+              "item": "2010-11-07T01:53:00.000",
+              "count": "481"
+            },
+            {
+              "item": "2010-11-07T01:35:00.000",
+              "count": "480"
+            },
+            {
+              "item": "2010-11-07T01:43:00.000",
+              "count": "477"
+            },
+            {
+              "item": "2010-11-07T01:44:00.000",
+              "count": "473"
+            },
+            {
+              "item": "2010-11-07T01:45:00.000",
+              "count": "473"
+            },
+            {
+              "item": "2010-11-07T01:40:00.000",
+              "count": "471"
+            },
+            {
+              "item": "2010-11-07T01:22:00.000",
+              "count": "471"
+            },
+            {
+              "item": "2010-11-07T01:46:00.000",
+              "count": "468"
+            },
+            {
+              "item": "2010-11-07T01:55:00.000",
+              "count": "468"
+            },
+            {
+              "item": "2010-11-07T01:28:00.000",
+              "count": "467"
+            },
+            {
+              "item": "2010-11-07T01:37:00.000",
+              "count": "467"
+            },
+            {
+              "item": "2010-11-07T02:00:00.000",
+              "count": "465"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "2010-01-01T00:00:00.000",
+          "count": "168994353",
+          "cardinality": "26772452"
+        },
+        "format": {
+          "view": "date_time",
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610004,
+        "name": "passenger_count",
+        "fieldName": "passenger_count",
+        "position": 4,
+        "description": "The number of passengers in the vehicle. This is a driver-entered value.",
+        "width": 280,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111167,
+        "cachedContents": {
+          "largest": "255",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "1",
+              "count": "115776112"
+            },
+            {
+              "item": "2",
+              "count": "26793220"
+            },
+            {
+              "item": "5",
+              "count": "14217357"
+            },
+            {
+              "item": "3",
+              "count": "7710551"
+            },
+            {
+              "item": "4",
+              "count": "3770213"
+            },
+            {
+              "item": "6",
+              "count": "690626"
+            },
+            {
+              "item": "0",
+              "count": "35640"
+            },
+            {
+              "item": "208",
+              "count": "603"
+            },
+            {
+              "item": "7",
+              "count": "4"
+            },
+            {
+              "item": "9",
+              "count": "3"
+            },
+            {
+              "item": "10",
+              "count": "3"
+            },
+            {
+              "item": "255",
+              "count": "2"
+            },
+            {
+              "item": "250",
+              "count": "2"
+            },
+            {
+              "item": "34",
+              "count": "1"
+            },
+            {
+              "item": "51",
+              "count": "1"
+            },
+            {
+              "item": "58",
+              "count": "1"
+            },
+            {
+              "item": "65",
+              "count": "1"
+            },
+            {
+              "item": "91",
+              "count": "1"
+            },
+            {
+              "item": "125",
+              "count": "1"
+            },
+            {
+              "item": "133",
+              "count": "1"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "0",
+          "count": "168994353",
+          "cardinality": "30"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610005,
+        "name": "trip_distance",
+        "fieldName": "trip_distance",
+        "position": 5,
+        "description": "The elapsed trip distance in miles reported by the taximeter.",
+        "width": 256,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111168,
+        "cachedContents": {
+          "largest": "16201631.4",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0.90000000000000002",
+              "count": "3919921"
+            },
+            {
+              "item": "1",
+              "count": "3905340"
+            },
+            {
+              "item": "0.80000000000000004",
+              "count": "3846907"
+            },
+            {
+              "item": "1.1000000000000001",
+              "count": "3777055"
+            },
+            {
+              "item": "1.2",
+              "count": "3610784"
+            },
+            {
+              "item": "0.69999999999999996",
+              "count": "3589731"
+            },
+            {
+              "item": "1.3",
+              "count": "3415190"
+            },
+            {
+              "item": "1.3999999999999999",
+              "count": "3247462"
+            },
+            {
+              "item": "0.59999999999999998",
+              "count": "3125865"
+            },
+            {
+              "item": "1.5",
+              "count": "3059544"
+            },
+            {
+              "item": "1.6000000000000001",
+              "count": "2890587"
+            },
+            {
+              "item": "1.7",
+              "count": "2701717"
+            },
+            {
+              "item": "1.8",
+              "count": "2528002"
+            },
+            {
+              "item": "0.5",
+              "count": "2456244"
+            },
+            {
+              "item": "1.8999999999999999",
+              "count": "2360102"
+            },
+            {
+              "item": "2",
+              "count": "2200941"
+            },
+            {
+              "item": "2.1000000000000001",
+              "count": "2047060"
+            },
+            {
+              "item": "2.2000000000000002",
+              "count": "1903357"
+            },
+            {
+              "item": "2.2999999999999998",
+              "count": "1769706"
+            },
+            {
+              "item": "0.40000000000000002",
+              "count": "1657373"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-21474834",
+          "count": "168994353",
+          "cardinality": "6667"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610006,
+        "name": "pickup_longitude",
+        "fieldName": "pickup_longitude",
+        "position": 6,
+        "description": "Longitude where the meter was engaged.",
+        "width": 292,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111169,
+        "cachedContents": {
+          "largest": "3569.9308500000002",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0",
+              "count": "3589321"
+            },
+            {
+              "item": "-73.137393000000003",
+              "count": "125840"
+            },
+            {
+              "item": "-73.995807999999997",
+              "count": "17623"
+            },
+            {
+              "item": "-73.951457000000005",
+              "count": "13563"
+            },
+            {
+              "item": "-73.982249999999993",
+              "count": "13190"
+            },
+            {
+              "item": "-73.982060000000004",
+              "count": "12354"
+            },
+            {
+              "item": "-73.937349999999995",
+              "count": "12235"
+            },
+            {
+              "item": "-73.982037000000005",
+              "count": "12137"
+            },
+            {
+              "item": "-73.982107999999997",
+              "count": "11989"
+            },
+            {
+              "item": "-73.982297000000003",
+              "count": "11974"
+            },
+            {
+              "item": "-73.982273000000006",
+              "count": "11602"
+            },
+            {
+              "item": "-73.982367999999994",
+              "count": "11436"
+            },
+            {
+              "item": "-73.937687999999994",
+              "count": "11237"
+            },
+            {
+              "item": "-73.982344999999995",
+              "count": "11061"
+            },
+            {
+              "item": "-73.982155000000006",
+              "count": "10874"
+            },
+            {
+              "item": "-73.982202000000001",
+              "count": "10237"
+            },
+            {
+              "item": "-73.937475000000006",
+              "count": "9966"
+            },
+            {
+              "item": "-73.981917999999993",
+              "count": "9930"
+            },
+            {
+              "item": "-73.982294999999993",
+              "count": "9929"
+            },
+            {
+              "item": "-73.982012999999995",
+              "count": "9900"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-3509.0150370000001",
+          "count": "168994353",
+          "cardinality": "460543"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610007,
+        "name": "pickup_latitude",
+        "fieldName": "pickup_latitude",
+        "position": 7,
+        "description": "Latitude where the meter was engaged.",
+        "width": 280,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111170,
+        "cachedContents": {
+          "largest": "3377.9933350000001",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0",
+              "count": "3588208"
+            },
+            {
+              "item": "41.366137999999999",
+              "count": "125840"
+            },
+            {
+              "item": "40.761200000000002",
+              "count": "18479"
+            },
+            {
+              "item": "40.758114999999997",
+              "count": "15925"
+            },
+            {
+              "item": "40.758127000000002",
+              "count": "14866"
+            },
+            {
+              "item": "40.758242000000003",
+              "count": "14014"
+            },
+            {
+              "item": "40.801963000000001",
+              "count": "12601"
+            },
+            {
+              "item": "40.774093000000001",
+              "count": "11070"
+            },
+            {
+              "item": "40.774056999999999",
+              "count": "10790"
+            },
+            {
+              "item": "40.774075000000003",
+              "count": "10734"
+            },
+            {
+              "item": "40.743755",
+              "count": "9793"
+            },
+            {
+              "item": "40.778840000000002",
+              "count": "9257"
+            },
+            {
+              "item": "40.761330000000001",
+              "count": "8832"
+            },
+            {
+              "item": "40.750127999999997",
+              "count": "8729"
+            },
+            {
+              "item": "40.774107999999998",
+              "count": "8726"
+            },
+            {
+              "item": "40.774099999999997",
+              "count": "8699"
+            },
+            {
+              "item": "40.774104999999999",
+              "count": "8674"
+            },
+            {
+              "item": "40.774096999999998",
+              "count": "8642"
+            },
+            {
+              "item": "40.774082",
+              "count": "8629"
+            },
+            {
+              "item": "40.774101999999999",
+              "count": "8555"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-3579.1394129999999",
+          "count": "168994353",
+          "cardinality": "392819"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610008,
+        "name": "ratecodeid",
+        "fieldName": "ratecodeid",
+        "position": 8,
+        "description": "The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride",
+        "width": 208,
+        "dataTypeName": "text",
+        "renderTypeName": "text",
+        "tableColumnId": 32111171,
+        "cachedContents": {
+          "largest": "96",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "1",
+              "count": "165664666"
+            },
+            {
+              "item": "2",
+              "count": "2123880"
+            },
+            {
+              "item": "4",
+              "count": "471214"
+            },
+            {
+              "item": "3",
+              "count": "333304"
+            },
+            {
+              "item": "5",
+              "count": "292181"
+            },
+            {
+              "item": "0",
+              "count": "101138"
+            },
+            {
+              "item": "6",
+              "count": "3108"
+            },
+            {
+              "item": "16",
+              "count": "1563"
+            },
+            {
+              "item": "35",
+              "count": "935"
+            },
+            {
+              "item": "24",
+              "count": "715"
+            },
+            {
+              "item": "33",
+              "count": "597"
+            },
+            {
+              "item": "128",
+              "count": "550"
+            },
+            {
+              "item": "8",
+              "count": "153"
+            },
+            {
+              "item": "34",
+              "count": "152"
+            },
+            {
+              "item": "210",
+              "count": "137"
+            },
+            {
+              "item": "11",
+              "count": "12"
+            },
+            {
+              "item": "7",
+              "count": "10"
+            },
+            {
+              "item": "9",
+              "count": "5"
+            },
+            {
+              "item": "219",
+              "count": "5"
+            },
+            {
+              "item": "64",
+              "count": "4"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "0",
+          "count": "168994353",
+          "cardinality": "35"
+        },
+        "format": {
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610009,
+        "name": "store_and_fwd_flag",
+        "fieldName": "store_and_fwd_flag",
+        "position": 9,
+        "description": "This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka \u201cstore and forward,\u201d because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip",
+        "width": 316,
+        "dataTypeName": "text",
+        "renderTypeName": "text",
+        "tableColumnId": 32111172,
+        "cachedContents": {
+          "largest": "Y",
+          "non_null": "80606394",
+          "null": "88387959",
+          "top": [
+            {
+              "item": "0",
+              "count": "45559630"
+            },
+            {
+              "item": "N",
+              "count": "33751812"
+            },
+            {
+              "item": "1",
+              "count": "789446"
+            },
+            {
+              "item": "Y",
+              "count": "505504"
+            },
+            {
+              "item": "*",
+              "count": "1"
+            },
+            {
+              "item": "2",
+              "count": "1"
+            }
+          ],
+          "not_null": "80606394",
+          "smallest": "*",
+          "count": "168994353",
+          "cardinality": "6"
+        },
+        "format": {
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610010,
+        "name": "dropoff_longitude",
+        "fieldName": "dropoff_longitude",
+        "position": 10,
+        "description": "Longitude where the meter was disengaged.",
+        "width": 304,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111173,
+        "cachedContents": {
+          "largest": "3443.6514870000001",
+          "non_null": "168994243",
+          "null": "110",
+          "top": [
+            {
+              "item": "0",
+              "count": "3526961"
+            },
+            {
+              "item": "-73.137393000000003",
+              "count": "96052"
+            },
+            {
+              "item": "-73.995807999999997",
+              "count": "17235"
+            },
+            {
+              "item": "-73.951457000000005",
+              "count": "13758"
+            },
+            {
+              "item": "-73.937349999999995",
+              "count": "12347"
+            },
+            {
+              "item": "-73.937687999999994",
+              "count": "11335"
+            },
+            {
+              "item": "-73.982249999999993",
+              "count": "10237"
+            },
+            {
+              "item": "-73.937475000000006",
+              "count": "10160"
+            },
+            {
+              "item": "-73.982367999999994",
+              "count": "9980"
+            },
+            {
+              "item": "-73.982297000000003",
+              "count": "9782"
+            },
+            {
+              "item": "-73.982037000000005",
+              "count": "9523"
+            },
+            {
+              "item": "-73.982060000000004",
+              "count": "9471"
+            },
+            {
+              "item": "-73.956220000000002",
+              "count": "9416"
+            },
+            {
+              "item": "-73.982107999999997",
+              "count": "9292"
+            },
+            {
+              "item": "-73.982273000000006",
+              "count": "9196"
+            },
+            {
+              "item": "-73.982344999999995",
+              "count": "9181"
+            },
+            {
+              "item": "-73.991228000000007",
+              "count": "8680"
+            },
+            {
+              "item": "-73.982487000000006",
+              "count": "8494"
+            },
+            {
+              "item": "-73.991416999999998",
+              "count": "8492"
+            },
+            {
+              "item": "-73.978952000000007",
+              "count": "8457"
+            }
+          ],
+          "not_null": "168994243",
+          "smallest": "-3579.1394129999999",
+          "count": "168994353",
+          "cardinality": "545543"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610011,
+        "name": "dropoff_latitude",
+        "fieldName": "dropoff_latitude",
+        "position": 11,
+        "description": "Latitude where the meter was disengaged.",
+        "width": 292,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111174,
+        "cachedContents": {
+          "largest": "3510.3806669999999",
+          "non_null": "168994243",
+          "null": "110",
+          "top": [
+            {
+              "item": "0",
+              "count": "3525729"
+            },
+            {
+              "item": "41.366137999999999",
+              "count": "96052"
+            },
+            {
+              "item": "40.761200000000002",
+              "count": "18571"
+            },
+            {
+              "item": "40.758114999999997",
+              "count": "16256"
+            },
+            {
+              "item": "40.758127000000002",
+              "count": "15120"
+            },
+            {
+              "item": "40.758242000000003",
+              "count": "14339"
+            },
+            {
+              "item": "40.801963000000001",
+              "count": "12863"
+            },
+            {
+              "item": "40.743755",
+              "count": "9863"
+            },
+            {
+              "item": "40.750127999999997",
+              "count": "9512"
+            },
+            {
+              "item": "40.761330000000001",
+              "count": "9070"
+            },
+            {
+              "item": "40.778840000000002",
+              "count": "9047"
+            },
+            {
+              "item": "40.745832999999998",
+              "count": "7844"
+            },
+            {
+              "item": "40.750163000000001",
+              "count": "7733"
+            },
+            {
+              "item": "40.750145000000003",
+              "count": "7687"
+            },
+            {
+              "item": "40.750092000000002",
+              "count": "7618"
+            },
+            {
+              "item": "40.750019999999999",
+              "count": "7614"
+            },
+            {
+              "item": "40.750414999999997",
+              "count": "7572"
+            },
+            {
+              "item": "40.762112000000002",
+              "count": "7541"
+            },
+            {
+              "item": "40.750467999999998",
+              "count": "7326"
+            },
+            {
+              "item": "40.750253000000001",
+              "count": "7318"
+            }
+          ],
+          "not_null": "168994243",
+          "smallest": "-3538.4323850000001",
+          "count": "168994353",
+          "cardinality": "457506"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610012,
+        "name": "payment_type",
+        "fieldName": "payment_type",
+        "position": 12,
+        "width": 244,
+        "dataTypeName": "text",
+        "renderTypeName": "text",
+        "tableColumnId": 32111175,
+        "cachedContents": {
+          "largest": "NOC",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "CSH",
+              "count": "50210641"
+            },
+            {
+              "item": "CRD",
+              "count": "30829647"
+            },
+            {
+              "item": "CAS",
+              "count": "30792006"
+            },
+            {
+              "item": "Cre",
+              "count": "27416052"
+            },
+            {
+              "item": "Cas",
+              "count": "26053917"
+            },
+            {
+              "item": "CRE",
+              "count": "3369965"
+            },
+            {
+              "item": "No",
+              "count": "200451"
+            },
+            {
+              "item": "Dis",
+              "count": "43596"
+            },
+            {
+              "item": "NA",
+              "count": "39986"
+            },
+            {
+              "item": "NOC",
+              "count": "31817"
+            },
+            {
+              "item": "DIS",
+              "count": "6275"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "Cas",
+          "count": "168994353",
+          "cardinality": "11"
+        },
+        "format": {},
+        "flags": null
+      },
+      {
+        "id": 226610013,
+        "name": "fare_amount",
+        "fieldName": "fare_amount",
+        "position": 13,
+        "description": "The time-and-distance fare calculated by the meter.",
+        "width": 232,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111176,
+        "cachedContents": {
+          "largest": "93960.070000000007",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "5.2999999999999998",
+              "count": "8908157"
+            },
+            {
+              "item": "5.7000000000000002",
+              "count": "8855248"
+            },
+            {
+              "item": "4.9000000000000004",
+              "count": "8638194"
+            },
+            {
+              "item": "6.0999999999999996",
+              "count": "8614594"
+            },
+            {
+              "item": "6.5",
+              "count": "8324492"
+            },
+            {
+              "item": "4.5",
+              "count": "8013340"
+            },
+            {
+              "item": "6.9000000000000004",
+              "count": "7829647"
+            },
+            {
+              "item": "7.2999999999999998",
+              "count": "7383978"
+            },
+            {
+              "item": "7.7000000000000002",
+              "count": "6861387"
+            },
+            {
+              "item": "4.0999999999999996",
+              "count": "6533737"
+            },
+            {
+              "item": "8.0999999999999996",
+              "count": "6339393"
+            },
+            {
+              "item": "8.5",
+              "count": "5823013"
+            },
+            {
+              "item": "8.9000000000000004",
+              "count": "5251340"
+            },
+            {
+              "item": "9.3000000000000007",
+              "count": "4785448"
+            },
+            {
+              "item": "3.7000000000000002",
+              "count": "4545260"
+            },
+            {
+              "item": "9.6999999999999993",
+              "count": "4343980"
+            },
+            {
+              "item": "10.1",
+              "count": "3947959"
+            },
+            {
+              "item": "10.5",
+              "count": "3604505"
+            },
+            {
+              "item": "10.9",
+              "count": "3259717"
+            },
+            {
+              "item": "11.300000000000001",
+              "count": "2972183"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-21474808",
+          "count": "168994353",
+          "cardinality": "4751"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610014,
+        "name": "extra",
+        "fieldName": "extra",
+        "position": 14,
+        "description": "Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.",
+        "width": 208,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111177,
+        "cachedContents": {
+          "largest": "615.77999999999997",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0",
+              "count": "85627528"
+            },
+            {
+              "item": "0.5",
+              "count": "57870622"
+            },
+            {
+              "item": "1",
+              "count": "25437676"
+            },
+            {
+              "item": "1.5",
+              "count": "48163"
+            },
+            {
+              "item": "-0.5",
+              "count": "6903"
+            },
+            {
+              "item": "-1",
+              "count": "2708"
+            },
+            {
+              "item": "2",
+              "count": "116"
+            },
+            {
+              "item": "1.25",
+              "count": "110"
+            },
+            {
+              "item": "2.75",
+              "count": "80"
+            },
+            {
+              "item": "7.5",
+              "count": "66"
+            },
+            {
+              "item": "1.8",
+              "count": "52"
+            },
+            {
+              "item": "0.25",
+              "count": "28"
+            },
+            {
+              "item": "40",
+              "count": "18"
+            },
+            {
+              "item": "2.5",
+              "count": "17"
+            },
+            {
+              "item": "0.050000000000000003",
+              "count": "16"
+            },
+            {
+              "item": "2.25",
+              "count": "16"
+            },
+            {
+              "item": "0.10000000000000001",
+              "count": "15"
+            },
+            {
+              "item": "49.539999999999999",
+              "count": "13"
+            },
+            {
+              "item": "8.75",
+              "count": "12"
+            },
+            {
+              "item": "0.01",
+              "count": "12"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-1",
+          "count": "168994353",
+          "cardinality": "108"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610015,
+        "name": "mta_tax",
+        "fieldName": "mta_tax",
+        "position": 15,
+        "description": "$0.50 MTA tax that is automatically triggered based on the metered rate in use.",
+        "width": 184,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111178,
+        "cachedContents": {
+          "largest": "1311.22",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0.5",
+              "count": "167975957"
+            },
+            {
+              "item": "0",
+              "count": "765605"
+            },
+            {
+              "item": "-1",
+              "count": "235083"
+            },
+            {
+              "item": "-0.5",
+              "count": "17490"
+            },
+            {
+              "item": "31.719999999999999",
+              "count": "159"
+            },
+            {
+              "item": "0.59999999999999998",
+              "count": "23"
+            },
+            {
+              "item": "48.539999999999999",
+              "count": "17"
+            },
+            {
+              "item": "54.200000000000003",
+              "count": "7"
+            },
+            {
+              "item": "68.629999999999995",
+              "count": "3"
+            },
+            {
+              "item": "1311.22",
+              "count": "1"
+            },
+            {
+              "item": "0.050000000000000003",
+              "count": "1"
+            },
+            {
+              "item": "0.11",
+              "count": "1"
+            },
+            {
+              "item": "0.55000000000000004",
+              "count": "1"
+            },
+            {
+              "item": "0.69999999999999996",
+              "count": "1"
+            },
+            {
+              "item": "1.78",
+              "count": "1"
+            },
+            {
+              "item": "2.3799999999999999",
+              "count": "1"
+            },
+            {
+              "item": "33.189999999999998",
+              "count": "1"
+            },
+            {
+              "item": "614.89999999999998",
+              "count": "1"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-1",
+          "count": "168994353",
+          "cardinality": "18"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610016,
+        "name": "tip_amount",
+        "fieldName": "tip_amount",
+        "position": 16,
+        "description": "Tip amount \u2013 This field is automatically populated for credit card tips. Cash tips are not included.",
+        "width": 220,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111179,
+        "cachedContents": {
+          "largest": "938.01999999999998",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0",
+              "count": "109026090"
+            },
+            {
+              "item": "1",
+              "count": "12551546"
+            },
+            {
+              "item": "2",
+              "count": "12356315"
+            },
+            {
+              "item": "1.5",
+              "count": "3326705"
+            },
+            {
+              "item": "3",
+              "count": "3291109"
+            },
+            {
+              "item": "4",
+              "count": "847284"
+            },
+            {
+              "item": "1.2",
+              "count": "652290"
+            },
+            {
+              "item": "5",
+              "count": "616409"
+            },
+            {
+              "item": "1.3999999999999999",
+              "count": "567495"
+            },
+            {
+              "item": "0.5",
+              "count": "525304"
+            },
+            {
+              "item": "1.6000000000000001",
+              "count": "482018"
+            },
+            {
+              "item": "2.5",
+              "count": "459926"
+            },
+            {
+              "item": "1.8",
+              "count": "455281"
+            },
+            {
+              "item": "1.25",
+              "count": "404886"
+            },
+            {
+              "item": "1.3",
+              "count": "397406"
+            },
+            {
+              "item": "1.1000000000000001",
+              "count": "367826"
+            },
+            {
+              "item": "0.75",
+              "count": "341447"
+            },
+            {
+              "item": "1.24",
+              "count": "293946"
+            },
+            {
+              "item": "0.80000000000000004",
+              "count": "280960"
+            },
+            {
+              "item": "1.8999999999999999",
+              "count": "266546"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-1677720.1000000001",
+          "count": "168994353",
+          "cardinality": "5237"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610017,
+        "name": "tolls_amount",
+        "fieldName": "tolls_amount",
+        "position": 17,
+        "description": "Total amount of all tolls paid in trip.",
+        "width": 244,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111180,
+        "cachedContents": {
+          "largest": "5510.0699999999997",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "0",
+              "count": "162715517"
+            },
+            {
+              "item": "4.5700000000000003",
+              "count": "5378099"
+            },
+            {
+              "item": "5.5",
+              "count": "415410"
+            },
+            {
+              "item": "8",
+              "count": "122464"
+            },
+            {
+              "item": "2.0899999999999999",
+              "count": "57773"
+            },
+            {
+              "item": "6",
+              "count": "45060"
+            },
+            {
+              "item": "5",
+              "count": "44214"
+            },
+            {
+              "item": "9.1400000000000006",
+              "count": "29106"
+            },
+            {
+              "item": "4.7999999999999998",
+              "count": "21576"
+            },
+            {
+              "item": "10",
+              "count": "14337"
+            },
+            {
+              "item": "11",
+              "count": "11655"
+            },
+            {
+              "item": "12",
+              "count": "10787"
+            },
+            {
+              "item": "4.1500000000000004",
+              "count": "9433"
+            },
+            {
+              "item": "0.5",
+              "count": "9427"
+            },
+            {
+              "item": "13.710000000000001",
+              "count": "9293"
+            },
+            {
+              "item": "1",
+              "count": "8314"
+            },
+            {
+              "item": "12.57",
+              "count": "8204"
+            },
+            {
+              "item": "3",
+              "count": "5129"
+            },
+            {
+              "item": "1.71",
+              "count": "3354"
+            },
+            {
+              "item": "13",
+              "count": "2943"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-21474836",
+          "count": "168994353",
+          "cardinality": "1821"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 226610018,
+        "name": "total_amount",
+        "fieldName": "total_amount",
+        "position": 18,
+        "description": "The total amount charged to passengers. Does not include cash tips.",
+        "width": 244,
+        "dataTypeName": "number",
+        "renderTypeName": "number",
+        "tableColumnId": 32111181,
+        "cachedContents": {
+          "largest": "93960.570000000007",
+          "non_null": "168994353",
+          "null": "0",
+          "top": [
+            {
+              "item": "7",
+              "count": "3522516"
+            },
+            {
+              "item": "6.5999999999999996",
+              "count": "3364339"
+            },
+            {
+              "item": "5.7999999999999998",
+              "count": "3349842"
+            },
+            {
+              "item": "5.4000000000000004",
+              "count": "3334594"
+            },
+            {
+              "item": "6.2000000000000002",
+              "count": "3334387"
+            },
+            {
+              "item": "5",
+              "count": "3276474"
+            },
+            {
+              "item": "7.4000000000000004",
+              "count": "3066341"
+            },
+            {
+              "item": "7.7999999999999998",
+              "count": "2923849"
+            },
+            {
+              "item": "9",
+              "count": "2816032"
+            },
+            {
+              "item": "8.1999999999999993",
+              "count": "2733458"
+            },
+            {
+              "item": "4.5999999999999996",
+              "count": "2669052"
+            },
+            {
+              "item": "8.5999999999999996",
+              "count": "2574445"
+            },
+            {
+              "item": "9.4000000000000004",
+              "count": "2125387"
+            },
+            {
+              "item": "6.2999999999999998",
+              "count": "2003338"
+            },
+            {
+              "item": "6.7000000000000002",
+              "count": "1989212"
+            },
+            {
+              "item": "5.9000000000000004",
+              "count": "1986909"
+            },
+            {
+              "item": "9.8000000000000007",
+              "count": "1962501"
+            },
+            {
+              "item": "7.5",
+              "count": "1959563"
+            },
+            {
+              "item": "7.0999999999999996",
+              "count": "1956676"
+            },
+            {
+              "item": "4.2000000000000002",
+              "count": "1952249"
+            }
+          ],
+          "not_null": "168994353",
+          "smallest": "-21474830",
+          "count": "168994353",
+          "cardinality": "17049"
+        },
+        "format": {
+          "precisionStyle": "standard",
+          "noCommas": "false",
+          "align": "right"
+        },
+        "flags": null
+      },
+      {
+        "id": 228762010,
+        "name": "pickup_location",
+        "fieldName": "pickup_location",
+        "position": 19,
+        "width": 100,
+        "dataTypeName": "point",
+        "renderTypeName": "point",
+        "tableColumnId": 32457116,
+        "cachedContents": {
+          "non_null": "168994353",
+          "largest": "VTS",
+          "null": "0",
+          "top": [
+            {
+              "item": "VTS",
+              "count": "84325280"
+            },
+            {
+              "item": "CMT",
+              "count": "80618790"
+            },
+            {
+              "item": "DDS",
+              "count": "4050283"
+            }
+          ],
+          "smallest": "CMT",
+          "count": "168994353",
+          "cardinality": "3"
+        },
+        "format": {
+          "align": "left"
+        },
+        "flags": null
+      },
+      {
+        "id": 228762489,
+        "name": "dropoff_location",
+        "fieldName": "dropoff_location",
+        "position": 20,
+        "dataTypeName": "point",
+        "renderTypeName": "point",
+        "tableColumnId": 32457185,
+        "cachedContents": {
+          "non_null": "168994353",
+          "largest": "VTS",
+          "null": "0",
+          "top": [
+            {
+              "item": "VTS",
+              "count": "84325280"
+            },
+            {
+              "item": "CMT",
+              "count": "80618790"
+            },
+            {
+              "item": "DDS",
+              "count": "4050283"
+            }
+          ],
+          "smallest": "CMT",
+          "count": "168994353",
+          "cardinality": "3"
+        },
+        "format": {},
+        "flags": null
+      }
+    ],
+    "commentUrl": null,
+    "createdAt": "2015-10-19T20:30:20.000+00:00",
+    "csvResourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.csv",
+    "customMetadataFieldsets": [
+      {
+        "name": "Dataset Information",
+        "fields": [
+          {
+            "type": "fixed",
+            "required": false,
+            "private": false,
+            "options": [
+              "311",
+              "Administration for Children's Services (ACS)",
+              "Alliance for Downtown New York",
+              "Banking Commission",
+              "Board of Correction (BOC)",
+              "Board of Elections (BOENY)",
+              "Board of Standards and Appeals (BSA)",
+              "Bronx Borough President (BPBX)",
+              "Brooklyn Borough President (BPBK)",
+              "Brooklyn Public Library (BPL)",
+              "Business Integrity Commission (BIC)",
+              "Campaign Finance Board (CFB)",
+              "City Clerk & Clerk of the Council (OCC)",
+              "City Council (NYCC)",
+              "City Employees' Retirement System (NYCERS)",
+              "City University of New York (CUNY)",
+              "Civil Service Commission",
+              "Civilian Complaint Review Board (CCRB)",
+              "Commission on Human Rights (CCHR)",
+              "Commission on Women's Issues (CWI)",
+              "Commission to Combat Police Corruption (CCPC)",
+              "Community Boards",
+              "Conflicts of Interest Board (COIB)",
+              "Department for the Aging (NYC Aging)",
+              "Department of Buildings (DOB)",
+              "Department of City Planning (DCP)",
+              "Department of Citywide Administrative Services (DCAS)",
+              "Department of Consumer and Worker Protection (DCWP)",
+              "Department of Correction (DOC)",
+              "Department of Cultural Affairs (DCLA)",
+              "Department of Design and Construction (DDC)",
+              "Department of Education (DOE)",
+              "Department of Environmental Protection (DEP)",
+              "Department of Finance (DOF)",
+              "Department of Health and Mental Hygiene (DOHMH)",
+              "Department of Homeless Services (DHS)",
+              "Department of Housing Preservation and Development (HPD)",
+              "Department of Information Technology & Telecommunications (DoITT)",
+              "Department of Investigation (DOI)",
+              "Department of Parks and Recreation (DPR)",
+              "Department of Probation (DOP)",
+              "Department of Records and Information Services (DORIS)",
+              "Department of Sanitation (DSNY)",
+              "Department of Small Business Services (SBS)",
+              "Department of Transportation (DOT)",
+              "Department of Veterans\u2019 Services (DVS)",
+              "Department of Youth and Community Development (DYCD)",
+              "Economic Development Corporation (NYCEDC)",
+              "Equal Employment Practices Commission (EEPC)",
+              "Financial Information Services Agency (FISA)",
+              "Fire Department Pension Fund & Related Funds",
+              "Fire Department of New York City (FDNY)",
+              "HHS Accelerator",
+              "Human Resources Administration (HRA)",
+              "Landmarks Preservation Commission (LPC)",
+              "Latin Media & Entertainment Commission (LMEC)",
+              "Law Department (LAW)",
+              "Loft Board (LOFT)",
+              "Manhattan Borough President (MBPO)",
+              "Mayor's Community Affairs Unit (CAU)",
+              "Mayor's Office for Economic Opportunity",
+              "Mayor's Office of Adult Education (ADULTED)",
+              "Mayor's Office of Climate Resiliency",
+              "Mayor's Office of Climate and Environmental Justice (MOCEJ)",
+              "Mayor's Office of Climate and Sustainability",
+              "Mayor's Office of Contract Services (MOCS)",
+              "Mayor's Office of Criminal Justice (MOCJ)",
+              "Mayor's Office of Ethnic and Community Media (MOECM)",
+              "Mayor's Office of Food Policy (MOFP)",
+              "Mayor's Office of Housing Recovery Operations (HRO)",
+              "Mayor's Office of Management & Budget (OMB)",
+              "Mayor's Office of Media And Entertainment (MOME)",
+              "Mayor's Office of Operations (OPS)",
+              "Mayor's Office of Recovery and Resiliency",
+              "Mayor's Office of Special Enforcement (OSE)",
+              "Mayor's Office of the Chief Technology Officer (MOCTO)",
+              "Mayor\u2019s Office of Community Mental Health (OCMH)",
+              "Mayor\u2019s Office of Environmental Coordination (MOEC)",
+              "Mayor\u2019s Office of Environmental Remediation (MOER)",
+              "Mayor\u2019s Office of Immigrant Affairs (MOIA)",
+              "Mayor\u2019s Office to End Domestic and Gender-Based Violence",
+              "Metropolitan Transportation Authority (MTA)",
+              "NYC & Company (NYCGO)",
+              "NYC Civic Engagement Commission",
+              "NYC Emergency Management (NYCEM)",
+              "NYC Health + Hospitals",
+              "NYC Independent Budget Office (IBO)",
+              "NYC Media (MEDIA)",
+              "NYC Service (NYCSERVICE)",
+              "New York City Housing Authority (NYCHA)",
+              "New York City Tax Commission (TAXCOMM)",
+              "New York Public Library (NYPL)",
+              "New York Public Library (NYPL)",
+              "Office of Administrative Tax Appeals (OATA)",
+              "Office of Administrative Trials and Hearings (OATH)",
+              "Office of Chief Medical Examiner (OCME)",
+              "Office of Citywide Event Coordination and Management (CECM)",
+              "Office of Collective Bargaining (OCB)",
+              "Office of Film, Theatre, and Broadcasting (FILM)",
+              "Office of Labor Relations (OLR)",
+              "Office of Payroll Administration (OPA)",
+              "Office of Technology and Innovation (OTI)",
+              "Office of the Actuary (ACTUARY)",
+              "Office of the Comptroller (COMPTROLLER)",
+              "Office of the Mayor (OTM)",
+              "Other",
+              "Police Department (NYPD)",
+              "Police Pension Fund (NYCPPF)",
+              "Port Authority of New York & New Jersey (PANYNJ)",
+              "Procurement Policy Board (PPB)",
+              "Public Design Commission (formerly Art Commission (ARTCOM) and Design Commission)",
+              "Queens Borough President (QBP)",
+              "Queens Library (QBPL)",
+              "Rent Guidelines Board (RGB)",
+              "School Construction Authority (SCA)",
+              "Staten Island Borough President (BPSI)",
+              "Tax Appeals Tribunal (TAT)",
+              "Taxi and Limousine Commission (TLC)",
+              "Teachers Retirement System (TRSNYC)"
+            ],
+            "name": "Agency"
+          }
+        ],
+        "existing_fields": {
+          "Agency": "Taxi and Limousine Commission (TLC)"
+        }
+      },
+      {
+        "name": "Update",
+        "fields": [
+          {
+            "type": "fixed",
+            "required": true,
+            "private": false,
+            "options": [
+              "Annually",
+              "As needed",
+              "Daily",
+              "Every 10 years",
+              "Every 2 months",
+              "Every 2 weeks",
+              "Every 2 years",
+              "Every 3 years",
+              "Every 4 months",
+              "Every 4 years",
+              "Every 5 years",
+              "Every 6 months",
+              "Every weekday",
+              "Historical data",
+              "Monthly",
+              "Other",
+              "Quarterly",
+              "To be determined",
+              "Weekly"
+            ],
+            "name": "Update Frequency"
+          },
+          {
+            "type": "fixed",
+            "required": true,
+            "private": false,
+            "options": [
+              "Yes",
+              "No"
+            ],
+            "name": "Automation"
+          },
+          {
+            "required": false,
+            "private": false,
+            "name": "Date Made Public"
+          },
+          {
+            "required": false,
+            "private": false,
+            "name": "Update Frequency Details"
+          },
+          {
+            "required": false,
+            "private": false,
+            "name": "Data Change Frequency"
+          }
+        ],
+        "existing_fields": {
+          "Automation": "No",
+          "Date Made Public": "2/19/2016",
+          "Update Frequency": "Historical data"
+        }
+      }
+    ],
+    "dsmapiScheduledUpdates": {},
+    "dsmapiAutomationGuidance": {},
+    "description": "Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. <br /><br />This dataset includes trip records from all trips completed in yellow taxis in NYC in 2010.  Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP).  The  trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.",
+    "disableContactDatasetOwner": true,
+    "editMetadataUrl": null,
+    "editUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/edit",
+    "emailShareUrl": "mailto:?subject=2010 Yellow Taxi Trip Data&body=Here is a dataset from NYC Open Data that I would like to share with you: https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij",
+    "exploreUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/explore",
+    "exportFormats": [
+      "csv",
+      "csv_for_excel",
+      "csv_for_excel_europe",
+      "json",
+      "rdf",
+      "rss",
+      "tsv_for_excel",
+      "xml"
+    ],
+    "facebookShareUrl": "http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij",
+    "geoJsonResourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.geojson",
+    "gridUrl": "/Transportation/2010-Yellow-Taxi-Trip-Data/74wj-s5ij/data",
+    "hasViewerGrant": true,
+    "id": "74wj-s5ij",
+    "isBlobby": false,
+    "isHref": false,
+    "isPrivate": false,
+    "isTabular": true,
+    "isUnpublished": false,
+    "lastUpdatedAt": "2022-09-22T16:19:01.000+00:00",
+    "licenseLink": null,
+    "licenseLogo": null,
+    "licenseName": null,
+    "metadata": {
+      "rdfClass": "",
+      "rdfSubject": "0",
+      "overrideLink": "https://s3-us-west-2.amazonaws.com/etl-raw.socrata.com/data.cityofnewyork.us/yellow_taxi_data_gzips/yellow_tripdata_2010.csv.gz",
+      "custom_fields": {
+        "Update": {
+          "Automation": "No",
+          "Date Made Public": "2/19/2016",
+          "Update Frequency": "Historical data"
+        },
+        "Dataset Information": {
+          "Agency": "Taxi and Limousine Commission (TLC)"
+        }
+      },
+      "availableDisplayTypes": [
+        "metadata_table",
+        "table",
+        "fatrow",
+        "page"
+      ],
+      "rowLabel": "",
+      "renderTypeConfig": {
+        "visible": {
+          "metadata_table": true,
+          "table": true
+        }
+      },
+      "flags": []
+    },
+    "name": "2010 Yellow Taxi Trip Data",
+    "namedResourceUrl": null,
+    "openRevisions": [],
+    "odataUrl": "https://data.cityofnewyork.us/OData.svc/74wj-s5ij",
+    "odataUrlV4": "https://data.cityofnewyork.us/api/odata/v4/74wj-s5ij",
+    "ownerName": "NYC OpenData",
+    "permissions": null,
+    "plotlyUrl": "https://data.cityofnewyork.us/api/views/74wj-s5ij/rows.json",
+    "provenance": "official",
+    "resourceUrl": "https://data.cityofnewyork.us/resource/74wj-s5ij.json",
+    "rowLabel": "",
+    "rowLabelMultiple": "",
+    "tags": null,
+    "twitterShareUrl": "http://twitter.com/share?text=2010%20Yellow%20Taxi%20Trip%20Data%20%7C%20NYC%20Open%20Data&url=https%3A%2F%2Fdata.cityofnewyork.us%2FTransportation%2F2010-Yellow-Taxi-Trip-Data%2F74wj-s5ij",
+    "viewCount": 310,
+    "coreView": {
+      "id": "74wj-s5ij",
+      "name": "2010 Yellow Taxi Trip Data",
+      "assetType": "dataset",
+      "attribution": "Taxi and Limousine Commission (TLC)",
+      "averageRating": 0.0,
+      "category": "Transportation",
+      "createdAt": 1445286620,
+      "description": "Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. \r\n\r\nThis dataset includes trip records from all trips completed in yellow taxis in NYC in 2010.  Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP).  The  trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.",
+      "displayType": "table",
+      "domainCName": "data.cityofnewyork.us",
+      "downloadCount": 199,
+      "hideFromCatalog": false,
+      "hideFromDataJson": false,
+      "indexUpdatedAt": 1573153558,
+      "newBackend": true,
+      "numberOfComments": 0,
+      "oid": 14108575,
+      "provenance": "official",
+      "publicationAppendEnabled": false,
+      "publicationDate": 1449535715,
+      "publicationGroup": 4957555,
+      "publicationStage": "published",
+      "rowClass": "",
+      "rowsUpdatedAt": 1449452507,
+      "rowsUpdatedBy": "8ibz-n25n",
+      "tableId": 4957555,
+      "totalTimesRated": 0,
+      "viewCount": 310,
+      "viewLastModified": 1663863541,
+      "viewType": "tabular",
+      "approvals": [
+        {
+          "reviewedAt": 1654530121,
+          "reviewedAutomatically": true,
+          "state": "approved",
+          "submissionId": 4743164,
+          "submissionObject": "public_audience_request",
+          "submissionOutcome": "change_audience",
+          "submittedAt": 1654530121,
+          "targetAudience": "public",
+          "workflowId": 2285,
+          "submissionDetails": {
+            "permissionType": "READ"
+          },
+          "submissionOutcomeApplication": {
+            "endedAt": 1654530121,
+            "failureCount": 0,
+            "startedAt": 1654530121,
+            "status": "success"
+          },
+          "submitter": {
+            "id": "axdq-ndzv",
+            "displayName": "Y"
+          }
+        }
+      ],
+      "clientContext": {
+        "clientContextVariables": [],
+        "inheritedVariables": {}
+      },
+      "columns": [
+        {
+          "id": 226610001,
+          "name": "vendorid",
+          "fieldName": "vendorid",
+          "position": 1,
+          "description": "A designation for the technology vendor that provided the record. CMT=Creative Mobile Technologies VTS= VeriFone, Inc. DDS=Digital Dispatch Systems",
+          "width": 208,
+          "dataTypeName": "text",
+          "renderTypeName": "text",
+          "tableColumnId": 32111164,
+          "cachedContents": {
+            "largest": "VTS",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "VTS",
+                "count": "84325280"
+              },
+              {
+                "item": "CMT",
+                "count": "80618790"
+              },
+              {
+                "item": "DDS",
+                "count": "4050283"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "CMT",
+            "count": "168994353",
+            "cardinality": "3"
+          },
+          "format": {
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610002,
+          "name": "tpep_pickup_datetime",
+          "fieldName": "tpep_pickup_datetime",
+          "position": 2,
+          "description": "The date and time when the meter was engaged.",
+          "width": 280,
+          "dataTypeName": "calendar_date",
+          "renderTypeName": "calendar_date",
+          "tableColumnId": 32111165,
+          "cachedContents": {
+            "largest": "2011-02-22T21:01:27.000",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "2010-11-07T01:00:00.000",
+                "count": "522"
+              },
+              {
+                "item": "2010-11-07T01:10:00.000",
+                "count": "501"
+              },
+              {
+                "item": "2010-11-07T01:01:00.000",
+                "count": "501"
+              },
+              {
+                "item": "2010-11-07T01:30:00.000",
+                "count": "500"
+              },
+              {
+                "item": "2010-11-07T01:02:00.000",
+                "count": "499"
+              },
+              {
+                "item": "2010-11-07T01:13:00.000",
+                "count": "499"
+              },
+              {
+                "item": "2010-11-07T01:09:00.000",
+                "count": "490"
+              },
+              {
+                "item": "2010-11-07T01:33:00.000",
+                "count": "490"
+              },
+              {
+                "item": "2010-11-07T01:05:00.000",
+                "count": "489"
+              },
+              {
+                "item": "2010-11-07T01:07:00.000",
+                "count": "489"
+              },
+              {
+                "item": "2010-11-07T01:15:00.000",
+                "count": "488"
+              },
+              {
+                "item": "2010-11-07T01:16:00.000",
+                "count": "485"
+              },
+              {
+                "item": "2010-11-07T01:37:00.000",
+                "count": "483"
+              },
+              {
+                "item": "2010-11-07T01:17:00.000",
+                "count": "481"
+              },
+              {
+                "item": "2010-11-07T01:08:00.000",
+                "count": "476"
+              },
+              {
+                "item": "2010-11-07T01:19:00.000",
+                "count": "474"
+              },
+              {
+                "item": "2010-11-07T01:53:00.000",
+                "count": "473"
+              },
+              {
+                "item": "2010-11-07T01:14:00.000",
+                "count": "473"
+              },
+              {
+                "item": "2010-11-07T01:40:00.000",
+                "count": "472"
+              },
+              {
+                "item": "2010-11-07T01:35:00.000",
+                "count": "468"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "2010-01-01T00:00:00.000",
+            "count": "168994353",
+            "cardinality": "26753988"
+          },
+          "format": {
+            "view": "date_time",
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610003,
+          "name": "dropoff_datetime",
+          "fieldName": "dropoff_datetime",
+          "position": 3,
+          "description": "The date and time when the meter was disengaged.",
+          "width": 292,
+          "dataTypeName": "calendar_date",
+          "renderTypeName": "calendar_date",
+          "tableColumnId": 32111166,
+          "cachedContents": {
+            "largest": "2011-05-09T23:40:38.000",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "2010-11-07T01:39:00.000",
+                "count": "500"
+              },
+              {
+                "item": "2010-11-07T01:21:00.000",
+                "count": "496"
+              },
+              {
+                "item": "2010-11-07T01:23:00.000",
+                "count": "495"
+              },
+              {
+                "item": "2010-11-07T01:26:00.000",
+                "count": "493"
+              },
+              {
+                "item": "2010-11-07T01:34:00.000",
+                "count": "491"
+              },
+              {
+                "item": "2010-11-07T01:27:00.000",
+                "count": "488"
+              },
+              {
+                "item": "2010-11-07T01:29:00.000",
+                "count": "487"
+              },
+              {
+                "item": "2010-11-07T01:36:00.000",
+                "count": "481"
+              },
+              {
+                "item": "2010-11-07T01:53:00.000",
+                "count": "481"
+              },
+              {
+                "item": "2010-11-07T01:35:00.000",
+                "count": "480"
+              },
+              {
+                "item": "2010-11-07T01:43:00.000",
+                "count": "477"
+              },
+              {
+                "item": "2010-11-07T01:44:00.000",
+                "count": "473"
+              },
+              {
+                "item": "2010-11-07T01:45:00.000",
+                "count": "473"
+              },
+              {
+                "item": "2010-11-07T01:40:00.000",
+                "count": "471"
+              },
+              {
+                "item": "2010-11-07T01:22:00.000",
+                "count": "471"
+              },
+              {
+                "item": "2010-11-07T01:46:00.000",
+                "count": "468"
+              },
+              {
+                "item": "2010-11-07T01:55:00.000",
+                "count": "468"
+              },
+              {
+                "item": "2010-11-07T01:28:00.000",
+                "count": "467"
+              },
+              {
+                "item": "2010-11-07T01:37:00.000",
+                "count": "467"
+              },
+              {
+                "item": "2010-11-07T02:00:00.000",
+                "count": "465"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "2010-01-01T00:00:00.000",
+            "count": "168994353",
+            "cardinality": "26772452"
+          },
+          "format": {
+            "view": "date_time",
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610004,
+          "name": "passenger_count",
+          "fieldName": "passenger_count",
+          "position": 4,
+          "description": "The number of passengers in the vehicle. This is a driver-entered value.",
+          "width": 280,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111167,
+          "cachedContents": {
+            "largest": "255",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "1",
+                "count": "115776112"
+              },
+              {
+                "item": "2",
+                "count": "26793220"
+              },
+              {
+                "item": "5",
+                "count": "14217357"
+              },
+              {
+                "item": "3",
+                "count": "7710551"
+              },
+              {
+                "item": "4",
+                "count": "3770213"
+              },
+              {
+                "item": "6",
+                "count": "690626"
+              },
+              {
+                "item": "0",
+                "count": "35640"
+              },
+              {
+                "item": "208",
+                "count": "603"
+              },
+              {
+                "item": "7",
+                "count": "4"
+              },
+              {
+                "item": "9",
+                "count": "3"
+              },
+              {
+                "item": "10",
+                "count": "3"
+              },
+              {
+                "item": "255",
+                "count": "2"
+              },
+              {
+                "item": "250",
+                "count": "2"
+              },
+              {
+                "item": "34",
+                "count": "1"
+              },
+              {
+                "item": "51",
+                "count": "1"
+              },
+              {
+                "item": "58",
+                "count": "1"
+              },
+              {
+                "item": "65",
+                "count": "1"
+              },
+              {
+                "item": "91",
+                "count": "1"
+              },
+              {
+                "item": "125",
+                "count": "1"
+              },
+              {
+                "item": "133",
+                "count": "1"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "0",
+            "count": "168994353",
+            "cardinality": "30"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610005,
+          "name": "trip_distance",
+          "fieldName": "trip_distance",
+          "position": 5,
+          "description": "The elapsed trip distance in miles reported by the taximeter.",
+          "width": 256,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111168,
+          "cachedContents": {
+            "largest": "16201631.4",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0.90000000000000002",
+                "count": "3919921"
+              },
+              {
+                "item": "1",
+                "count": "3905340"
+              },
+              {
+                "item": "0.80000000000000004",
+                "count": "3846907"
+              },
+              {
+                "item": "1.1000000000000001",
+                "count": "3777055"
+              },
+              {
+                "item": "1.2",
+                "count": "3610784"
+              },
+              {
+                "item": "0.69999999999999996",
+                "count": "3589731"
+              },
+              {
+                "item": "1.3",
+                "count": "3415190"
+              },
+              {
+                "item": "1.3999999999999999",
+                "count": "3247462"
+              },
+              {
+                "item": "0.59999999999999998",
+                "count": "3125865"
+              },
+              {
+                "item": "1.5",
+                "count": "3059544"
+              },
+              {
+                "item": "1.6000000000000001",
+                "count": "2890587"
+              },
+              {
+                "item": "1.7",
+                "count": "2701717"
+              },
+              {
+                "item": "1.8",
+                "count": "2528002"
+              },
+              {
+                "item": "0.5",
+                "count": "2456244"
+              },
+              {
+                "item": "1.8999999999999999",
+                "count": "2360102"
+              },
+              {
+                "item": "2",
+                "count": "2200941"
+              },
+              {
+                "item": "2.1000000000000001",
+                "count": "2047060"
+              },
+              {
+                "item": "2.2000000000000002",
+                "count": "1903357"
+              },
+              {
+                "item": "2.2999999999999998",
+                "count": "1769706"
+              },
+              {
+                "item": "0.40000000000000002",
+                "count": "1657373"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-21474834",
+            "count": "168994353",
+            "cardinality": "6667"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610006,
+          "name": "pickup_longitude",
+          "fieldName": "pickup_longitude",
+          "position": 6,
+          "description": "Longitude where the meter was engaged.",
+          "width": 292,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111169,
+          "cachedContents": {
+            "largest": "3569.9308500000002",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0",
+                "count": "3589321"
+              },
+              {
+                "item": "-73.137393000000003",
+                "count": "125840"
+              },
+              {
+                "item": "-73.995807999999997",
+                "count": "17623"
+              },
+              {
+                "item": "-73.951457000000005",
+                "count": "13563"
+              },
+              {
+                "item": "-73.982249999999993",
+                "count": "13190"
+              },
+              {
+                "item": "-73.982060000000004",
+                "count": "12354"
+              },
+              {
+                "item": "-73.937349999999995",
+                "count": "12235"
+              },
+              {
+                "item": "-73.982037000000005",
+                "count": "12137"
+              },
+              {
+                "item": "-73.982107999999997",
+                "count": "11989"
+              },
+              {
+                "item": "-73.982297000000003",
+                "count": "11974"
+              },
+              {
+                "item": "-73.982273000000006",
+                "count": "11602"
+              },
+              {
+                "item": "-73.982367999999994",
+                "count": "11436"
+              },
+              {
+                "item": "-73.937687999999994",
+                "count": "11237"
+              },
+              {
+                "item": "-73.982344999999995",
+                "count": "11061"
+              },
+              {
+                "item": "-73.982155000000006",
+                "count": "10874"
+              },
+              {
+                "item": "-73.982202000000001",
+                "count": "10237"
+              },
+              {
+                "item": "-73.937475000000006",
+                "count": "9966"
+              },
+              {
+                "item": "-73.981917999999993",
+                "count": "9930"
+              },
+              {
+                "item": "-73.982294999999993",
+                "count": "9929"
+              },
+              {
+                "item": "-73.982012999999995",
+                "count": "9900"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-3509.0150370000001",
+            "count": "168994353",
+            "cardinality": "460543"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610007,
+          "name": "pickup_latitude",
+          "fieldName": "pickup_latitude",
+          "position": 7,
+          "description": "Latitude where the meter was engaged.",
+          "width": 280,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111170,
+          "cachedContents": {
+            "largest": "3377.9933350000001",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0",
+                "count": "3588208"
+              },
+              {
+                "item": "41.366137999999999",
+                "count": "125840"
+              },
+              {
+                "item": "40.761200000000002",
+                "count": "18479"
+              },
+              {
+                "item": "40.758114999999997",
+                "count": "15925"
+              },
+              {
+                "item": "40.758127000000002",
+                "count": "14866"
+              },
+              {
+                "item": "40.758242000000003",
+                "count": "14014"
+              },
+              {
+                "item": "40.801963000000001",
+                "count": "12601"
+              },
+              {
+                "item": "40.774093000000001",
+                "count": "11070"
+              },
+              {
+                "item": "40.774056999999999",
+                "count": "10790"
+              },
+              {
+                "item": "40.774075000000003",
+                "count": "10734"
+              },
+              {
+                "item": "40.743755",
+                "count": "9793"
+              },
+              {
+                "item": "40.778840000000002",
+                "count": "9257"
+              },
+              {
+                "item": "40.761330000000001",
+                "count": "8832"
+              },
+              {
+                "item": "40.750127999999997",
+                "count": "8729"
+              },
+              {
+                "item": "40.774107999999998",
+                "count": "8726"
+              },
+              {
+                "item": "40.774099999999997",
+                "count": "8699"
+              },
+              {
+                "item": "40.774104999999999",
+                "count": "8674"
+              },
+              {
+                "item": "40.774096999999998",
+                "count": "8642"
+              },
+              {
+                "item": "40.774082",
+                "count": "8629"
+              },
+              {
+                "item": "40.774101999999999",
+                "count": "8555"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-3579.1394129999999",
+            "count": "168994353",
+            "cardinality": "392819"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610008,
+          "name": "ratecodeid",
+          "fieldName": "ratecodeid",
+          "position": 8,
+          "description": "The final rate code in effect at the end of the trip. 1= Standard rate 2=JFK 3=Newark 4=Nassau or Westchester 5=Negotiated fare 6=Group ride",
+          "width": 208,
+          "dataTypeName": "text",
+          "renderTypeName": "text",
+          "tableColumnId": 32111171,
+          "cachedContents": {
+            "largest": "96",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "1",
+                "count": "165664666"
+              },
+              {
+                "item": "2",
+                "count": "2123880"
+              },
+              {
+                "item": "4",
+                "count": "471214"
+              },
+              {
+                "item": "3",
+                "count": "333304"
+              },
+              {
+                "item": "5",
+                "count": "292181"
+              },
+              {
+                "item": "0",
+                "count": "101138"
+              },
+              {
+                "item": "6",
+                "count": "3108"
+              },
+              {
+                "item": "16",
+                "count": "1563"
+              },
+              {
+                "item": "35",
+                "count": "935"
+              },
+              {
+                "item": "24",
+                "count": "715"
+              },
+              {
+                "item": "33",
+                "count": "597"
+              },
+              {
+                "item": "128",
+                "count": "550"
+              },
+              {
+                "item": "8",
+                "count": "153"
+              },
+              {
+                "item": "34",
+                "count": "152"
+              },
+              {
+                "item": "210",
+                "count": "137"
+              },
+              {
+                "item": "11",
+                "count": "12"
+              },
+              {
+                "item": "7",
+                "count": "10"
+              },
+              {
+                "item": "9",
+                "count": "5"
+              },
+              {
+                "item": "219",
+                "count": "5"
+              },
+              {
+                "item": "64",
+                "count": "4"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "0",
+            "count": "168994353",
+            "cardinality": "35"
+          },
+          "format": {
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610009,
+          "name": "store_and_fwd_flag",
+          "fieldName": "store_and_fwd_flag",
+          "position": 9,
+          "description": "This flag indicates whether the trip record was held in vehicle memory before sending to the vendor, aka \u201cstore and forward,\u201d because the vehicle did not have a connection to the server. Y= store and forward trip N= not a store and forward trip",
+          "width": 316,
+          "dataTypeName": "text",
+          "renderTypeName": "text",
+          "tableColumnId": 32111172,
+          "cachedContents": {
+            "largest": "Y",
+            "non_null": "80606394",
+            "null": "88387959",
+            "top": [
+              {
+                "item": "0",
+                "count": "45559630"
+              },
+              {
+                "item": "N",
+                "count": "33751812"
+              },
+              {
+                "item": "1",
+                "count": "789446"
+              },
+              {
+                "item": "Y",
+                "count": "505504"
+              },
+              {
+                "item": "*",
+                "count": "1"
+              },
+              {
+                "item": "2",
+                "count": "1"
+              }
+            ],
+            "not_null": "80606394",
+            "smallest": "*",
+            "count": "168994353",
+            "cardinality": "6"
+          },
+          "format": {
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610010,
+          "name": "dropoff_longitude",
+          "fieldName": "dropoff_longitude",
+          "position": 10,
+          "description": "Longitude where the meter was disengaged.",
+          "width": 304,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111173,
+          "cachedContents": {
+            "largest": "3443.6514870000001",
+            "non_null": "168994243",
+            "null": "110",
+            "top": [
+              {
+                "item": "0",
+                "count": "3526961"
+              },
+              {
+                "item": "-73.137393000000003",
+                "count": "96052"
+              },
+              {
+                "item": "-73.995807999999997",
+                "count": "17235"
+              },
+              {
+                "item": "-73.951457000000005",
+                "count": "13758"
+              },
+              {
+                "item": "-73.937349999999995",
+                "count": "12347"
+              },
+              {
+                "item": "-73.937687999999994",
+                "count": "11335"
+              },
+              {
+                "item": "-73.982249999999993",
+                "count": "10237"
+              },
+              {
+                "item": "-73.937475000000006",
+                "count": "10160"
+              },
+              {
+                "item": "-73.982367999999994",
+                "count": "9980"
+              },
+              {
+                "item": "-73.982297000000003",
+                "count": "9782"
+              },
+              {
+                "item": "-73.982037000000005",
+                "count": "9523"
+              },
+              {
+                "item": "-73.982060000000004",
+                "count": "9471"
+              },
+              {
+                "item": "-73.956220000000002",
+                "count": "9416"
+              },
+              {
+                "item": "-73.982107999999997",
+                "count": "9292"
+              },
+              {
+                "item": "-73.982273000000006",
+                "count": "9196"
+              },
+              {
+                "item": "-73.982344999999995",
+                "count": "9181"
+              },
+              {
+                "item": "-73.991228000000007",
+                "count": "8680"
+              },
+              {
+                "item": "-73.982487000000006",
+                "count": "8494"
+              },
+              {
+                "item": "-73.991416999999998",
+                "count": "8492"
+              },
+              {
+                "item": "-73.978952000000007",
+                "count": "8457"
+              }
+            ],
+            "not_null": "168994243",
+            "smallest": "-3579.1394129999999",
+            "count": "168994353",
+            "cardinality": "545543"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610011,
+          "name": "dropoff_latitude",
+          "fieldName": "dropoff_latitude",
+          "position": 11,
+          "description": "Latitude where the meter was disengaged.",
+          "width": 292,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111174,
+          "cachedContents": {
+            "largest": "3510.3806669999999",
+            "non_null": "168994243",
+            "null": "110",
+            "top": [
+              {
+                "item": "0",
+                "count": "3525729"
+              },
+              {
+                "item": "41.366137999999999",
+                "count": "96052"
+              },
+              {
+                "item": "40.761200000000002",
+                "count": "18571"
+              },
+              {
+                "item": "40.758114999999997",
+                "count": "16256"
+              },
+              {
+                "item": "40.758127000000002",
+                "count": "15120"
+              },
+              {
+                "item": "40.758242000000003",
+                "count": "14339"
+              },
+              {
+                "item": "40.801963000000001",
+                "count": "12863"
+              },
+              {
+                "item": "40.743755",
+                "count": "9863"
+              },
+              {
+                "item": "40.750127999999997",
+                "count": "9512"
+              },
+              {
+                "item": "40.761330000000001",
+                "count": "9070"
+              },
+              {
+                "item": "40.778840000000002",
+                "count": "9047"
+              },
+              {
+                "item": "40.745832999999998",
+                "count": "7844"
+              },
+              {
+                "item": "40.750163000000001",
+                "count": "7733"
+              },
+              {
+                "item": "40.750145000000003",
+                "count": "7687"
+              },
+              {
+                "item": "40.750092000000002",
+                "count": "7618"
+              },
+              {
+                "item": "40.750019999999999",
+                "count": "7614"
+              },
+              {
+                "item": "40.750414999999997",
+                "count": "7572"
+              },
+              {
+                "item": "40.762112000000002",
+                "count": "7541"
+              },
+              {
+                "item": "40.750467999999998",
+                "count": "7326"
+              },
+              {
+                "item": "40.750253000000001",
+                "count": "7318"
+              }
+            ],
+            "not_null": "168994243",
+            "smallest": "-3538.4323850000001",
+            "count": "168994353",
+            "cardinality": "457506"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610012,
+          "name": "payment_type",
+          "fieldName": "payment_type",
+          "position": 12,
+          "width": 244,
+          "dataTypeName": "text",
+          "renderTypeName": "text",
+          "tableColumnId": 32111175,
+          "cachedContents": {
+            "largest": "NOC",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "CSH",
+                "count": "50210641"
+              },
+              {
+                "item": "CRD",
+                "count": "30829647"
+              },
+              {
+                "item": "CAS",
+                "count": "30792006"
+              },
+              {
+                "item": "Cre",
+                "count": "27416052"
+              },
+              {
+                "item": "Cas",
+                "count": "26053917"
+              },
+              {
+                "item": "CRE",
+                "count": "3369965"
+              },
+              {
+                "item": "No",
+                "count": "200451"
+              },
+              {
+                "item": "Dis",
+                "count": "43596"
+              },
+              {
+                "item": "NA",
+                "count": "39986"
+              },
+              {
+                "item": "NOC",
+                "count": "31817"
+              },
+              {
+                "item": "DIS",
+                "count": "6275"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "Cas",
+            "count": "168994353",
+            "cardinality": "11"
+          },
+          "format": {},
+          "flags": null
+        },
+        {
+          "id": 226610013,
+          "name": "fare_amount",
+          "fieldName": "fare_amount",
+          "position": 13,
+          "description": "The time-and-distance fare calculated by the meter.",
+          "width": 232,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111176,
+          "cachedContents": {
+            "largest": "93960.070000000007",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "5.2999999999999998",
+                "count": "8908157"
+              },
+              {
+                "item": "5.7000000000000002",
+                "count": "8855248"
+              },
+              {
+                "item": "4.9000000000000004",
+                "count": "8638194"
+              },
+              {
+                "item": "6.0999999999999996",
+                "count": "8614594"
+              },
+              {
+                "item": "6.5",
+                "count": "8324492"
+              },
+              {
+                "item": "4.5",
+                "count": "8013340"
+              },
+              {
+                "item": "6.9000000000000004",
+                "count": "7829647"
+              },
+              {
+                "item": "7.2999999999999998",
+                "count": "7383978"
+              },
+              {
+                "item": "7.7000000000000002",
+                "count": "6861387"
+              },
+              {
+                "item": "4.0999999999999996",
+                "count": "6533737"
+              },
+              {
+                "item": "8.0999999999999996",
+                "count": "6339393"
+              },
+              {
+                "item": "8.5",
+                "count": "5823013"
+              },
+              {
+                "item": "8.9000000000000004",
+                "count": "5251340"
+              },
+              {
+                "item": "9.3000000000000007",
+                "count": "4785448"
+              },
+              {
+                "item": "3.7000000000000002",
+                "count": "4545260"
+              },
+              {
+                "item": "9.6999999999999993",
+                "count": "4343980"
+              },
+              {
+                "item": "10.1",
+                "count": "3947959"
+              },
+              {
+                "item": "10.5",
+                "count": "3604505"
+              },
+              {
+                "item": "10.9",
+                "count": "3259717"
+              },
+              {
+                "item": "11.300000000000001",
+                "count": "2972183"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-21474808",
+            "count": "168994353",
+            "cardinality": "4751"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610014,
+          "name": "extra",
+          "fieldName": "extra",
+          "position": 14,
+          "description": "Miscellaneous extras and surcharges. Currently, this only includes the $0.50 and $1 rush hour and overnight charges.",
+          "width": 208,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111177,
+          "cachedContents": {
+            "largest": "615.77999999999997",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0",
+                "count": "85627528"
+              },
+              {
+                "item": "0.5",
+                "count": "57870622"
+              },
+              {
+                "item": "1",
+                "count": "25437676"
+              },
+              {
+                "item": "1.5",
+                "count": "48163"
+              },
+              {
+                "item": "-0.5",
+                "count": "6903"
+              },
+              {
+                "item": "-1",
+                "count": "2708"
+              },
+              {
+                "item": "2",
+                "count": "116"
+              },
+              {
+                "item": "1.25",
+                "count": "110"
+              },
+              {
+                "item": "2.75",
+                "count": "80"
+              },
+              {
+                "item": "7.5",
+                "count": "66"
+              },
+              {
+                "item": "1.8",
+                "count": "52"
+              },
+              {
+                "item": "0.25",
+                "count": "28"
+              },
+              {
+                "item": "40",
+                "count": "18"
+              },
+              {
+                "item": "2.5",
+                "count": "17"
+              },
+              {
+                "item": "0.050000000000000003",
+                "count": "16"
+              },
+              {
+                "item": "2.25",
+                "count": "16"
+              },
+              {
+                "item": "0.10000000000000001",
+                "count": "15"
+              },
+              {
+                "item": "49.539999999999999",
+                "count": "13"
+              },
+              {
+                "item": "8.75",
+                "count": "12"
+              },
+              {
+                "item": "0.01",
+                "count": "12"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-1",
+            "count": "168994353",
+            "cardinality": "108"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610015,
+          "name": "mta_tax",
+          "fieldName": "mta_tax",
+          "position": 15,
+          "description": "$0.50 MTA tax that is automatically triggered based on the metered rate in use.",
+          "width": 184,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111178,
+          "cachedContents": {
+            "largest": "1311.22",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0.5",
+                "count": "167975957"
+              },
+              {
+                "item": "0",
+                "count": "765605"
+              },
+              {
+                "item": "-1",
+                "count": "235083"
+              },
+              {
+                "item": "-0.5",
+                "count": "17490"
+              },
+              {
+                "item": "31.719999999999999",
+                "count": "159"
+              },
+              {
+                "item": "0.59999999999999998",
+                "count": "23"
+              },
+              {
+                "item": "48.539999999999999",
+                "count": "17"
+              },
+              {
+                "item": "54.200000000000003",
+                "count": "7"
+              },
+              {
+                "item": "68.629999999999995",
+                "count": "3"
+              },
+              {
+                "item": "1311.22",
+                "count": "1"
+              },
+              {
+                "item": "0.050000000000000003",
+                "count": "1"
+              },
+              {
+                "item": "0.11",
+                "count": "1"
+              },
+              {
+                "item": "0.55000000000000004",
+                "count": "1"
+              },
+              {
+                "item": "0.69999999999999996",
+                "count": "1"
+              },
+              {
+                "item": "1.78",
+                "count": "1"
+              },
+              {
+                "item": "2.3799999999999999",
+                "count": "1"
+              },
+              {
+                "item": "33.189999999999998",
+                "count": "1"
+              },
+              {
+                "item": "614.89999999999998",
+                "count": "1"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-1",
+            "count": "168994353",
+            "cardinality": "18"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610016,
+          "name": "tip_amount",
+          "fieldName": "tip_amount",
+          "position": 16,
+          "description": "Tip amount \u2013 This field is automatically populated for credit card tips. Cash tips are not included.",
+          "width": 220,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111179,
+          "cachedContents": {
+            "largest": "938.01999999999998",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0",
+                "count": "109026090"
+              },
+              {
+                "item": "1",
+                "count": "12551546"
+              },
+              {
+                "item": "2",
+                "count": "12356315"
+              },
+              {
+                "item": "1.5",
+                "count": "3326705"
+              },
+              {
+                "item": "3",
+                "count": "3291109"
+              },
+              {
+                "item": "4",
+                "count": "847284"
+              },
+              {
+                "item": "1.2",
+                "count": "652290"
+              },
+              {
+                "item": "5",
+                "count": "616409"
+              },
+              {
+                "item": "1.3999999999999999",
+                "count": "567495"
+              },
+              {
+                "item": "0.5",
+                "count": "525304"
+              },
+              {
+                "item": "1.6000000000000001",
+                "count": "482018"
+              },
+              {
+                "item": "2.5",
+                "count": "459926"
+              },
+              {
+                "item": "1.8",
+                "count": "455281"
+              },
+              {
+                "item": "1.25",
+                "count": "404886"
+              },
+              {
+                "item": "1.3",
+                "count": "397406"
+              },
+              {
+                "item": "1.1000000000000001",
+                "count": "367826"
+              },
+              {
+                "item": "0.75",
+                "count": "341447"
+              },
+              {
+                "item": "1.24",
+                "count": "293946"
+              },
+              {
+                "item": "0.80000000000000004",
+                "count": "280960"
+              },
+              {
+                "item": "1.8999999999999999",
+                "count": "266546"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-1677720.1000000001",
+            "count": "168994353",
+            "cardinality": "5237"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610017,
+          "name": "tolls_amount",
+          "fieldName": "tolls_amount",
+          "position": 17,
+          "description": "Total amount of all tolls paid in trip.",
+          "width": 244,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111180,
+          "cachedContents": {
+            "largest": "5510.0699999999997",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "0",
+                "count": "162715517"
+              },
+              {
+                "item": "4.5700000000000003",
+                "count": "5378099"
+              },
+              {
+                "item": "5.5",
+                "count": "415410"
+              },
+              {
+                "item": "8",
+                "count": "122464"
+              },
+              {
+                "item": "2.0899999999999999",
+                "count": "57773"
+              },
+              {
+                "item": "6",
+                "count": "45060"
+              },
+              {
+                "item": "5",
+                "count": "44214"
+              },
+              {
+                "item": "9.1400000000000006",
+                "count": "29106"
+              },
+              {
+                "item": "4.7999999999999998",
+                "count": "21576"
+              },
+              {
+                "item": "10",
+                "count": "14337"
+              },
+              {
+                "item": "11",
+                "count": "11655"
+              },
+              {
+                "item": "12",
+                "count": "10787"
+              },
+              {
+                "item": "4.1500000000000004",
+                "count": "9433"
+              },
+              {
+                "item": "0.5",
+                "count": "9427"
+              },
+              {
+                "item": "13.710000000000001",
+                "count": "9293"
+              },
+              {
+                "item": "1",
+                "count": "8314"
+              },
+              {
+                "item": "12.57",
+                "count": "8204"
+              },
+              {
+                "item": "3",
+                "count": "5129"
+              },
+              {
+                "item": "1.71",
+                "count": "3354"
+              },
+              {
+                "item": "13",
+                "count": "2943"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-21474836",
+            "count": "168994353",
+            "cardinality": "1821"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 226610018,
+          "name": "total_amount",
+          "fieldName": "total_amount",
+          "position": 18,
+          "description": "The total amount charged to passengers. Does not include cash tips.",
+          "width": 244,
+          "dataTypeName": "number",
+          "renderTypeName": "number",
+          "tableColumnId": 32111181,
+          "cachedContents": {
+            "largest": "93960.570000000007",
+            "non_null": "168994353",
+            "null": "0",
+            "top": [
+              {
+                "item": "7",
+                "count": "3522516"
+              },
+              {
+                "item": "6.5999999999999996",
+                "count": "3364339"
+              },
+              {
+                "item": "5.7999999999999998",
+                "count": "3349842"
+              },
+              {
+                "item": "5.4000000000000004",
+                "count": "3334594"
+              },
+              {
+                "item": "6.2000000000000002",
+                "count": "3334387"
+              },
+              {
+                "item": "5",
+                "count": "3276474"
+              },
+              {
+                "item": "7.4000000000000004",
+                "count": "3066341"
+              },
+              {
+                "item": "7.7999999999999998",
+                "count": "2923849"
+              },
+              {
+                "item": "9",
+                "count": "2816032"
+              },
+              {
+                "item": "8.1999999999999993",
+                "count": "2733458"
+              },
+              {
+                "item": "4.5999999999999996",
+                "count": "2669052"
+              },
+              {
+                "item": "8.5999999999999996",
+                "count": "2574445"
+              },
+              {
+                "item": "9.4000000000000004",
+                "count": "2125387"
+              },
+              {
+                "item": "6.2999999999999998",
+                "count": "2003338"
+              },
+              {
+                "item": "6.7000000000000002",
+                "count": "1989212"
+              },
+              {
+                "item": "5.9000000000000004",
+                "count": "1986909"
+              },
+              {
+                "item": "9.8000000000000007",
+                "count": "1962501"
+              },
+              {
+                "item": "7.5",
+                "count": "1959563"
+              },
+              {
+                "item": "7.0999999999999996",
+                "count": "1956676"
+              },
+              {
+                "item": "4.2000000000000002",
+                "count": "1952249"
+              }
+            ],
+            "not_null": "168994353",
+            "smallest": "-21474830",
+            "count": "168994353",
+            "cardinality": "17049"
+          },
+          "format": {
+            "precisionStyle": "standard",
+            "noCommas": "false",
+            "align": "right"
+          },
+          "flags": null
+        },
+        {
+          "id": 228762010,
+          "name": "pickup_location",
+          "fieldName": "pickup_location",
+          "position": 19,
+          "width": 100,
+          "dataTypeName": "point",
+          "renderTypeName": "point",
+          "tableColumnId": 32457116,
+          "cachedContents": {
+            "non_null": "168994353",
+            "largest": "VTS",
+            "null": "0",
+            "top": [
+              {
+                "item": "VTS",
+                "count": "84325280"
+              },
+              {
+                "item": "CMT",
+                "count": "80618790"
+              },
+              {
+                "item": "DDS",
+                "count": "4050283"
+              }
+            ],
+            "smallest": "CMT",
+            "count": "168994353",
+            "cardinality": "3"
+          },
+          "format": {
+            "align": "left"
+          },
+          "flags": null
+        },
+        {
+          "id": 228762489,
+          "name": "dropoff_location",
+          "fieldName": "dropoff_location",
+          "position": 20,
+          "dataTypeName": "point",
+          "renderTypeName": "point",
+          "tableColumnId": 32457185,
+          "cachedContents": {
+            "non_null": "168994353",
+            "largest": "VTS",
+            "null": "0",
+            "top": [
+              {
+                "item": "VTS",
+                "count": "84325280"
+              },
+              {
+                "item": "CMT",
+                "count": "80618790"
+              },
+              {
+                "item": "DDS",
+                "count": "4050283"
+              }
+            ],
+            "smallest": "CMT",
+            "count": "168994353",
+            "cardinality": "3"
+          },
+          "format": {},
+          "flags": null
+        }
+      ],
+      "grants": [
+        {
+          "inherited": false,
+          "type": "viewer",
+          "flags": [
+            "public"
+          ]
+        }
+      ],
+      "metadata": {
+        "rdfClass": "",
+        "rdfSubject": "0",
+        "overrideLink": "https://s3-us-west-2.amazonaws.com/etl-raw.socrata.com/data.cityofnewyork.us/yellow_taxi_data_gzips/yellow_tripdata_2010.csv.gz",
+        "custom_fields": {
+          "Update": {
+            "Automation": "No",
+            "Date Made Public": "2/19/2016",
+            "Update Frequency": "Historical data"
+          },
+          "Dataset Information": {
+            "Agency": "Taxi and Limousine Commission (TLC)"
+          }
+        },
+        "availableDisplayTypes": [
+          "metadata_table",
+          "table",
+          "fatrow",
+          "page"
+        ],
+        "rowLabel": "",
+        "renderTypeConfig": {
+          "visible": {
+            "metadata_table": true,
+            "table": true
+          }
+        }
+      },
+      "owner": {
+        "id": "5fuc-pqz2",
+        "displayName": "NYC OpenData",
+        "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE",
+        "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB",
+        "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY",
+        "screenName": "NYC OpenData",
+        "type": "interactive",
+        "flags": [
+          "acceptedEula",
+          "mayBeStoriesCoOwner"
+        ]
+      },
+      "query": {},
+      "rights": [
+        "read"
+      ],
+      "tableAuthor": {
+        "id": "5fuc-pqz2",
+        "displayName": "NYC OpenData",
+        "profileImageUrlLarge": "/api/users/5fuc-pqz2/profile_images/LARGE",
+        "profileImageUrlMedium": "/api/users/5fuc-pqz2/profile_images/THUMB",
+        "profileImageUrlSmall": "/api/users/5fuc-pqz2/profile_images/TINY",
+        "screenName": "NYC OpenData",
+        "type": "interactive",
+        "flags": [
+          "acceptedEula",
+          "mayBeStoriesCoOwner"
+        ]
+      },
+      "flags": [
+        "default",
+        "ownerMayBeContacted",
+        "restorable",
+        "restorePossibleForType"
+      ],
+      "computedColumns": []
+    }
+  },
+  "relatedViews": [
+    {
+      "name": "2010 Yellow Taxi Trip Data",
+      "id": "ry9a-ubra",
+      "description": "<div>Filter cards by selecting date ranges on date/time cards, typing freeform text into search cards, or clicking the columns in the column card. This dataset includes trip records from all trips completed in yellow taxis in NYC in 2010. Records include fields capturing pick-up and drop-off dates/times, pick-up and drop-off locations, trip distances, itemized fares, rate types, payment types, and driver-reported passenger counts. The data used in the attached datasets were collected and provided to the NYC Taxi and Limousine Commission (TLC) by technology providers authorized under the Taxicab Passenger Enhancement Program (TPEP). The trip data was not created by the TLC, and TLC makes no representations as to the accuracy of these data.<br></div><div>Data Dictionary for this dataset can be found here: <a href=\"http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf\">http://www.nyc.gov/html/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf</a><br></div><div><br></div>",
+      "url": "https://data.cityofnewyork.us/Transportation/2010-Yellow-Taxi-Trip-Data/ry9a-ubra",
+      "displayType": "data_lens",
+      "isFederated": false,
+      "createdAt": "2016-01-07T14:07:15.000Z",
+      "updatedAt": "2018-09-11T16:50:16.000Z",
+      "viewCount": 3890,
+      "isPrivate": false,
+      "imageUrl": "https://data.cityofnewyork.us/views/ry9a-ubra/files/ac6f26a3-7ba0-40c8-a585-386e471479a6",
+      "scope": "public",
+      "sourceDomain": "data.cityofnewyork.us"
+    }
+  ],
+  "featuredContent": [],
+  "websocketToken": null
+}

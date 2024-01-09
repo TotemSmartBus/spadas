@@ -176,18 +176,12 @@ public class FrameworkService {
                             indexString, null, true, qo.getError(), config.getLeafCapacity(), null, config.isSaveIndex(), data);
             case IA -> { // Intersecting Area
                 search.setScanning(false);
-                search.rangeQueryRankingArea(framework.datasetRoot, result, queryNode.getMBRmax(), queryNode.getMBRmin(), Double.MAX_VALUE, qo.getK(), null, qo.getDim(),
+                result = search.rangeQueryRankingArea(framework.datasetRoot, result, queryNode.getMBRmax(), queryNode.getMBRmin(), Double.MAX_VALUE, qo.getK(), null, qo.getDim(),
                         datalakeIndex);
             }
             case GBO -> { // GridOverlap using index
                 IndexNode root = framework.datasetRoot;//datalakeIndex.get(1);//use store
-
-//            if (datalakeIndex != null)
-//                root = datalakeIndex.get(1);
-//            int[] queryzcurve = new int[zcodemap.get(queryid).size()];
                 int[] queryzcurve = zCodeMap.get(qo.getDatasetId()).stream().mapToInt(Integer::intValue).toArray();
-//            for (int i = 0; i < zcodemap.get(queryid).size(); i++)
-//                queryzcurve[i] = zcodemap.get(queryid).get(i);
                 result = search.gridOverlap(root, result, queryzcurve, Double.MAX_VALUE, qo.getK(), null, datalakeIndex);
             }
             case EMD -> {
@@ -205,10 +199,11 @@ public class FrameworkService {
 
         List<DatasetVo> finalResult = new ArrayList<>(result.entrySet().
                 stream()
-                .sorted((o1, o2) -> (int) (o1.getValue() - o2.getValue()))
+                .sorted(Comparator.comparingDouble(Map.Entry::getValue))
                 .map(item -> new DatasetVo(indexMap.get(item.getKey()), datasetIdMapping.get(item.getKey()), item.getKey(), dataMapPorto.get(item.getKey()))).
                 toList());
-        return finalResult.subList(0, qo.getK());
+//        防止找不到k个候选结果
+        return finalResult.size() > qo.getK() ? finalResult.subList(0, qo.getK()) : finalResult;
     }
 
     public List<List<double[]>> union(UnionParams dto) {
@@ -375,16 +370,24 @@ public class FrameworkService {
 //        HashMap<Integer, HashMap<Long, Double>> mapForDir =
 //        HashMap<Long, Double> mapQuery = mapForDir.get(datasetQueryID);
         HashMap<Integer, ArrayList<double[]>> allHistogram = new HashMap<>();
-        double[][] iterMatrix = new double[zCodeMapEmd.size()][config.getDimension()];
-        double[] ubMove = new double[zCodeMapEmd.size()];
-        int[] histogram_name = new int[zCodeMapEmd.size()];
+//        iterMatrix中的每个元素代表一个数据集池化后的坐标
+        HashMap<Integer, double[]> iterMatrix = new HashMap<>();
+        HashMap<Integer, Double> ubMove = new HashMap<>();
+        HashMap<Integer, Integer> histogramName = new HashMap<>();
+//        double[][] iterMatrix = new double[zCodeMapEmd.size()][config.getDimension()];
+//        double[] ubMove = new double[zCodeMapEmd.size()];
+//        int[] histogram_name = new int[zCodeMapEmd.size()];
 //        signature_t querySignature = new signature_t();
         double[] query = new double[config.getDimension()];
         double radiusQuery = 0;
-        SignatureT querySignature = getAllData(queryId, allHistogram, iterMatrix, ubMove, histogram_name, query, radiusQuery);
-        int leafThreshold = 10;
-        int maxDepth = 15;
+        SignatureT querySignature = getAllData(queryId, allHistogram, iterMatrix, ubMove, histogramName, query, radiusQuery);
+        int leafThreshold = 100;
+        int maxDepth = 10;
+//        看能不能替换成已经建立好的索引结构，可以在原有的结构上增加属性如radiusEMD
+//        这里建立的ballTree到底是整个根节点还是单个数据集的根节点
+//        这里是根据iterMatrix（池化后的坐标数据）来建立节点的，而不是原始数据
         IndexNode ballTree = ball_tree.create(ubMove, iterMatrix, leafThreshold, maxDepth, config.getDimension());
+//        我的理解是，第一次过滤根本不会深入到数据集节点内部，更不会到叶子节点和点级别
         ArrayList<Integer> firstFlterResult = getBranchAndBoundResultID(ballTree, query);
         PriorityQueue<relaxIndexNode> resultApprox = new PriorityQueue<>(new ComparatorByRelaxIndexNode());
         relax_EMD re = new relax_EMD();
@@ -419,7 +422,7 @@ public class FrameworkService {
     }
 
     public SignatureT getAllData(int datasetQueryId, HashMap<Integer, ArrayList<double[]>> allHistogram,
-                                 double[][] iterMatrix, double[] ubMove, int[] histogram_name, double[] query, double queryRadius) {
+                                 HashMap<Integer, double[]> iterMatrix, HashMap<Integer, Double> ubMove, HashMap<Integer, Integer> histogramName, double[] query, double queryRadius) {
         ArrayList<double[]> l = new ArrayList<>();
         DoubleArrayList ub = new DoubleArrayList();
         Map<Integer, String[]> datasetList_after_pooling = getPooling(zCodeMapEmd);
@@ -460,13 +463,16 @@ public class FrameworkService {
                 querySignature = new SignatureT(n, features, weights);
             }
             //sampleData
-            double[] corrd = new double[config.getDimension()];
-            corrd[0] = Double.parseDouble(buf[1]);
-            corrd[1] = Double.parseDouble(buf[2]);
-            l.add(corrd);
-            his.add(Integer.parseInt(buf[0]));
-            ub.add(Double.parseDouble(buf[3]));
-            numberOfLine++;
+//            double[] corrd = new double[config.getDimension()];
+//            corrd[0] = Double.parseDouble(buf[1]);
+//            corrd[1] = Double.parseDouble(buf[2]);
+            iterMatrix.put(id, new double[]{Double.parseDouble(buf[1]), Double.parseDouble(buf[2])});
+            ubMove.put(id, Double.parseDouble(buf[3]));
+            histogramName.put(id, Integer.parseInt(buf[0]));
+//            l.add(corrd);
+//            his.add(Integer.parseInt(buf[0]));
+//            ub.add(Double.parseDouble(buf[3]));
+//            numberOfLine++;
         };
         /*while (numberOfLine < zCodeMapEmd.size()) {
             ArrayList<double[]> allPoints = new ArrayList<>();
@@ -509,16 +515,16 @@ public class FrameworkService {
             numberOfLine++;
         }*/
         //sampleData
-        int countOfRow = numberOfLine;
+//        int countOfRow = numberOfLine;
 //        iterMatrix = new double[countOfRow][dimension];
 //        ubMove = new double[countOfRow];
 //        histogram_name = new int[countOfRow];
-        ubMove = ub.toDoubleArray();
-        for (int i = 0; i < countOfRow; i++) {
-            iterMatrix[i][0] = l.get(i)[0];
-            iterMatrix[i][1] = l.get(i)[1];
-            histogram_name[i] = his.get(i);
-        }
+//        ubMove = ub.toDoubleArray();
+//        for (int i = 0; i < countOfRow; i++) {
+//            iterMatrix[i][0] = l.get(i)[0];
+//            iterMatrix[i][1] = l.get(i)[1];
+//            histogram_name[i] = his.get(i);
+//        }
 //        return datasetID;
         return querySignature;
     }

@@ -1,4 +1,4 @@
-package edu.nyu.dss.similarity;
+package edu.whu.query;
 
 import edu.nyu.dss.similarity.index.DatasetIDMapping;
 import lombok.extern.slf4j.Slf4j;
@@ -28,27 +28,35 @@ public class DatasetQueryTest {
 
     @Test
     public void generalDatasetQueryTest() throws IOException, CloneNotSupportedException {
-        int queryId = 300;
+        int queryId = 4000;
+        int k = 30;
 
         DatasetQueryParams params = new DatasetQueryParams();
         params.setDatasetId(queryId);
+        params.setK(k);
         
         String datasetName = datasetIdMapping.get(queryId);
         log.info("current dataset name is {}, id is {}", datasetName, queryId);
 
-        params.setMode(QueryMode.Haus);
-        query(params);
-        params.setMode(QueryMode.IA);
-        query(params);
-        params.setMode(QueryMode.GBO);
-        query(params);
-        params.setMode(QueryMode.EMD);
-        query(params);
+        for (QueryMode queryMode : QueryMode.values()) {
+            params.setMode(queryMode);
+            query(params);
+        }
+
+//        params.setMode(QueryMode.Haus);
+//        query(params);
+//        params.setMode(QueryMode.IA);
+//        query(params);
+//        params.setMode(QueryMode.GBO);
+//        query(params);
+//        params.setMode(QueryMode.EMD);
+//        query(params);
+        System.out.println();
     }
 
     private void query(DatasetQueryParams params) throws IOException, CloneNotSupportedException {
         List<DatasetVo> vos = frameworkService.datasetQuery(params);
-        log.info("EMD:");
+        log.info("result of {} : ", params.getMode());
         printDatasetVo(vos);
     }
 

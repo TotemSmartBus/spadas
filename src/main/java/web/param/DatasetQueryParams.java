@@ -10,7 +10,7 @@ import web.consts.QueryMode;
 @AllArgsConstructor
 public class DatasetQueryParams {
     int k = 10; //top-k
-    int dim; //dimension
+    int dim = 2; //dimension
     double[][] querydata;
     int datasetId = -1;
     //    0: Haus, 1: IA, 2: GBO, 3: EMD

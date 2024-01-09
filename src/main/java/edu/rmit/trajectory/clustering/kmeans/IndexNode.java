@@ -10,7 +10,9 @@ import edu.rmit.trajectory.clustering.kpaths.Util;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @JsonIgnoreProperties({"assignedCluster", "bounds", "prunedCounter"})
 @Data
 // this class will build the index based on the
@@ -547,7 +549,14 @@ public class IndexNode {
                 areaD *= mbrmax[i] - mbrmin[i];
                 areaQ *= querymax[i] - querymin[i];
             }
-            double similarity = Math.abs(Math.min(area / areaD, area / areaQ));
+            double similarity = 0;
+            if (area == areaD) {
+                similarity = Math.abs(area / areaQ);
+            } else if (area == areaQ) {
+                similarity = Math.abs(area / areaD);
+            } else {
+                similarity = Math.abs(Math.max(area / areaD, area / areaQ));
+            }
             return 1 / similarity;
         }
     }
@@ -768,7 +777,8 @@ public class IndexNode {
     public double GridOverlap(int[] query) {
 //        得到结果的范围是：0~1
 //        值越小，距离越近，相似度越高
-        double res = (query.length - computeIntersection(signautre, query, signautre.length, query.length)) / (double) query.length;
+        double intersection = computeIntersection(signautre, query, signautre.length, query.length);
+        double res = (query.length - intersection) / query.length;
         return res;
     }
 

@@ -5,7 +5,7 @@ import es.saulvargas.balltrees.BallTreeMatrix;
 import es.saulvargas.balltrees.BinaryTree;
 import it.unimi.dsi.fastutil.ints.IntArrayList;
 
-import java.util.Random;
+import java.util.*;
 
 public class ball_tree extends BinaryTree {
     private static final Random random = new Random();
@@ -14,29 +14,16 @@ public class ball_tree extends BinaryTree {
     public BallTreeMatrix.Ball getRoot(){
         return (BallTreeMatrix.Ball) super.getRoot();
     }
-    public static IndexNode create(double[] ubMove, double[][] iterMatrix, int leafThreshold, int maxDepth){
-        int[] rows = new int[iterMatrix.length];
-        for (int row = 0; row < iterMatrix.length; row++){
-            rows[row] = row;
-        }
-        BallTreeMatrix.Ball root = new BallTreeMatrix.Ball(ubMove, rows, iterMatrix);
-        IndexNode rootKmeans = new IndexNode(iterMatrix[0].length);
-        int depth = 0;
-        if (rows.length > leafThreshold && depth<maxDepth){
-            createChildren(root, leafThreshold, depth+1, maxDepth);
-        }
-        //???
-        root.traverseConvert2(rootKmeans, iterMatrix[0].length);
-        return rootKmeans;
-    }
 
-    public static IndexNode create(double[] ubMove, double[][] itemMatrix, int leafThreshold, int maxDepth, int dimension) {
-        int[] rows = new int[itemMatrix.length];
-        for (int row = 0; row < itemMatrix.length; row++) {
-            rows[row] = row;
-        }
+
+    public static IndexNode create(HashMap<Integer, Double> ubMove, HashMap<Integer, double[]> iterMatrix, int leafThreshold, int maxDepth, int dimension) {
+//        int[] rows = new int[itemMatrix.length];
+//        for (int row = 0; row < itemMatrix.length; row++) {
+//            rows[row] = row;
+//        }
+        int[] rows = iterMatrix.keySet().stream().mapToInt(Integer::intValue).toArray();
 //        System.out.println("create function rows ===" + rows.length);
-        BallTreeMatrix.Ball root = new BallTreeMatrix.Ball(ubMove, rows, itemMatrix);
+        BallTreeMatrix.Ball root = new BallTreeMatrix.Ball(rows, ubMove, iterMatrix);
         IndexNode rootKmeans = new IndexNode(dimension);
 
         int depth = 0;
@@ -52,12 +39,12 @@ public class ball_tree extends BinaryTree {
         IntArrayList leftRows = new IntArrayList();
         IntArrayList rightRows = new IntArrayList();
 
-        splitItems(parent.getRows(), parent.getItemMatrix(), leftRows, rightRows);
+        splitItems(parent.getRows(), parent.getItemMatrixMapping(), leftRows, rightRows);
 //        System.out.println("leftRows=="+leftRows.size());
 //        System.out.println("rightRows=="+rightRows.size());
-        parent.clearRows();
-        BallTreeMatrix.Ball leftChild = new BallTreeMatrix.Ball(parent.getUbMove(),leftRows.toIntArray(), parent.getItemMatrix());
-        BallTreeMatrix.Ball rightChild = new BallTreeMatrix.Ball(parent.getUbMove(),rightRows.toIntArray(), parent.getItemMatrix());
+//        parent.clearRows();
+        BallTreeMatrix.Ball leftChild = new BallTreeMatrix.Ball(leftRows.toIntArray(), parent.getUbMove(), parent.getItemMatrixMapping());
+        BallTreeMatrix.Ball rightChild = new BallTreeMatrix.Ball(rightRows.toIntArray(), parent.getUbMove(), parent.getItemMatrixMapping());
 
         parent.setLeftChild(leftChild);
         if (leftChild.getRows().length > leafThreshold && depth < maxDepth && rightChild.getRows().length > 0) {
@@ -71,7 +58,7 @@ public class ball_tree extends BinaryTree {
 
     }
 
-    protected static void splitItems(int[] rows, double[][] itemMatrix, IntArrayList leftRows, IntArrayList rightRows) {
+    protected static void splitItems(int[] rows, Map<Integer, double[]> itemMatrixMapping, IntArrayList leftRows, IntArrayList rightRows) {
         // pick random element
 //        try {
 //            FileWriter fw = new FileWriter("D:\\GitHub\\Argov\\data\\1.txt",true);
@@ -79,12 +66,12 @@ public class ball_tree extends BinaryTree {
 //            fw.write("splitItems fuction rows length ==="+rows.length);
 //            fw.write("\n");
 
-        double[] x = itemMatrix[rows[new Random().nextInt(rows.length)]]; //random.nextInt(rows.length)
+        double[] x = itemMatrixMapping.get(rows[new Random().nextInt(rows.length)]); //random.nextInt(rows.length)
         // select furthest point A to x
         double[] A = x;
         double dist1 = 0;
         for (int row : rows) {
-            double[] y = itemMatrix[row];
+            double[] y = itemMatrixMapping.get(row);
             double dist2 = distance2(x, y);
             if (dist2 > dist1) {
                 A = y;
@@ -95,7 +82,7 @@ public class ball_tree extends BinaryTree {
         double[] B = A;
         dist1 = 0;
         for (int row : rows) {
-            double[] y = itemMatrix[row];
+            double[] y = itemMatrixMapping.get(row);
             double dist2 = distance2(A, y);
             if (dist2 > dist1) {
                 B = y;
@@ -104,7 +91,7 @@ public class ball_tree extends BinaryTree {
         }
         // split data according to A and B proximity
         for (int row : rows) {
-            double[] y = itemMatrix[row];
+            double[] y = itemMatrixMapping.get(row);
             double distA = distance2(A, y);
             double distB = distance2(B, y);
             if (distA <= distB) {

@@ -47,11 +47,15 @@ public class ChinaReader {
     @Autowired
     private FilePathIndex filePathIndex;
 
+    @Autowired
+    private ZCodeMap zCodeMap;
+
     public Map<Integer, double[][]> read(File file, int fileNo, CityNode cityNode, int datasetIDForOneDir) throws IOException {
         if (!file.getName().endsWith("csv")) {
             return null;
         }
         int i = 0;
+        IndexNode node = new IndexNode(2);
         List<double[]> list = new ArrayList<>();
         double[][] data;
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
@@ -97,7 +101,7 @@ public class ChinaReader {
             }
             if (config.isCacheIndex()) {
 //				createDatasetIndex(fileNo, xxx,1);
-                IndexNode node = indexBuilder.createDatasetIndex(fileNo, data, 1, cityNode);
+                node = indexBuilder.createDatasetIndex(fileNo, data, 1, cityNode);
 //                对数据进行基于网格的取样，减小数据量
                 indexBuilder.samplingDataByGrid(data, fileNo, node);
                 node.setFileName(shortName);
@@ -105,6 +109,8 @@ public class ChinaReader {
             datasetIDMapping.put(fileNo, shortName);
             fileIDMap.put(fileNo, file);
             filePathIndex.put(file.getAbsolutePath(), fileNo);
+            indexBuilder.storeZcurve(data, fileNo);
+            node.setSignautre(zCodeMap.get(fileNo).stream().mapToInt(Integer::intValue).toArray());
             indexBuilder.storeZCurveForEMD(data, fileNo, 180, 360, -90, -180);
         }
         return dataMapPorto;

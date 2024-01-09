@@ -16,6 +16,9 @@
  */
 package es.saulvargas.balltrees;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import static java.lang.Math.max;
 
 /**
@@ -25,9 +28,11 @@ import static java.lang.Math.max;
  *
  * @author Saúl Vargas (Saul.Vargas@glasgow.ac.uk)
  */
+@Data
+@NoArgsConstructor
 public class BinaryTree {
 
-    private final NodeBall rootNode;
+    private NodeBall rootNode;
 
     public BinaryTree(NodeBall root) {
         rootNode = root;

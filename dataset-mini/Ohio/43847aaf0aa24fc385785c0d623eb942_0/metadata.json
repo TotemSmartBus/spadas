@@ -1,1 +1,15 @@
-{"Title": "MTP  Point Projects [Ohio] {2020-2050}", "Description": "The Metropolitan Transportation Plan (MTP) is a long-range planning document that brings togetherlocal governments from around Central Ohio and other local, state, and federal agencies to identify andcoordinate transportation goals and policies. The MTP will identify transportation strategies and projects, andprovide the basis for transportation funding to be spent to improve highways, transit, freight, bikeways, andpedestrian facilities.", "Creator": "MORPC", "Provider": "GEOhio Spatial Data Discovery Portal", "Resource Class": "Datasets and Web services", "Resource Type": "Vector data", "Temporal Coverage": "2020-2050", "Date Issued": "2021-04-09", "Place": "Ohio", "Access Rights": "Public", "Format": "Shapefile", "Language": "English", "Date Added": "2023-03-08"}
+{
+  "Title": "MTP  Point Projects [Ohio] {2020-2050}",
+  "Description": "The Metropolitan Transportation Plan (MTP) is a long-range planning document that brings togetherlocal governments from around Central Ohio and other local, state, and federal agencies to identify andcoordinate transportation goals and policies. The MTP will identify transportation strategies and projects, andprovide the basis for transportation funding to be spent to improve highways, transit, freight, bikeways, andpedestrian facilities.",
+  "Creator": "MORPC",
+  "Provider": "GEOhio Spatial Data Discovery Portal",
+  "Resource Class": "Datasets and Web services",
+  "Resource Type": "Vector data",
+  "Temporal Coverage": "2020-2050",
+  "Date Issued": "2021-04-09",
+  "Place": "Ohio",
+  "Access Rights": "Public",
+  "Format": "Shapefile",
+  "Language": "English",
+  "Date Added": "2023-03-08"
+}

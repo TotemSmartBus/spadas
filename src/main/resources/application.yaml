@@ -8,8 +8,8 @@ spring:
 
 spadas:
   dimension: 2
-  resolution: 10
-  leaf-capacity: 1000
+  resolution: 12
+  leaf-capacity: 500
   cache-dataset: true
   cache-index: true
   save-index: true

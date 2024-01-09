@@ -43,10 +43,14 @@ public class PureLocationReader extends AbsReader {
     @Autowired
     private IndexBuilder indexBuilder;
 
+    @Autowired
+    private ZCodeMap zCodeMap;
+
     public Map<Integer, double[][]> read(File file, int fileNo, CityNode cityNode, int datasetIDForOneDir) throws IOException {
         if (!file.getName().endsWith("csv")) {
             return null;
         }
+        IndexNode node = new IndexNode(2);
         int i = 0;
         List<double[]> list = new ArrayList<>();
         double[][] data;
@@ -90,13 +94,15 @@ public class PureLocationReader extends AbsReader {
             }
             if (config.isCacheIndex()) {
 //				createDatasetIndex(fileNo, xxx,1);
-                IndexNode node = indexBuilder.createDatasetIndex(fileNo, data, 1, cityNode);
+                node = indexBuilder.createDatasetIndex(fileNo, data, 1, cityNode);
 //                对数据进行基于网格的取样，减小数据量
                 indexBuilder.samplingDataByGrid(data, fileNo, node);
                 node.setFileName(shortName);
             }
             datasetIDMapping.put(fileNo, shortName);
             fileIDMap.put(fileNo, file);
+            indexBuilder.storeZcurve(data, fileNo);
+            node.setSignautre(zCodeMap.get(fileNo).stream().mapToInt(Integer::intValue).toArray());
             indexBuilder.storeZCurveForEMD(data, fileNo, 180, 360, -90, -180);
 //          storeZcurve(xxx, fileNo, 5, 5, 30, 100);
 ////        EffectivenessStudy.SerializedZcurve(zcodemap);

@@ -239,7 +239,7 @@ public class Search {
                                                           double min_dis, int k, HashMap<Integer, PriorityQueue<queueMain>> queues, int dim, Map<Integer, IndexNode> datalakeIndex) {
         //give a range, find all the dataset that intersect, we just need the data lake tree and ranked by intersected areas
 //		只需要data lake tree?
-        if (datalakeRoot.isRootLeaf()) { // 永远为真
+        if (datalakeRoot.isRootLeaf()) {
             double distance = datalakeRoot.intersectedArea(querymax, querymin, dim);
             if (distance < min_dis) {
 //                增加一个判断，若存在点在range中，则加入结果集
@@ -257,7 +257,7 @@ public class Search {
                 if (!scanning) {
                     bound = childNode.intersectedArea(querymax, querymin, dim);
                 }
-                if (scanning || bound < min_dis && bound > 0) {
+                if (bound < min_dis && bound > 0) {
                     result = rangeQueryRankingArea(childNode, result, querymax, querymin, min_dis, k, queues, dim, datalakeIndex);
                 }
             }
@@ -439,7 +439,7 @@ public class Search {
                                                  Map<Integer, String> argoDataMap, int k, String indexString, boolean nonselectedDimension[], boolean dimensionAll,
                                                  double error, int capacity, double weight[], boolean saveDatasetIndex, double[][] querydata) throws FileNotFoundException, IOException {
 //        为了提高查询准确度，不管前端提供的k为多少，统一查询前100个近邻数据集，然后再取前k个
-        int constantK = 10;
+        int constantK = 100;
         PriorityQueue<queueForNode> aForNodes = new PriorityQueue<queueForNode>();
         queueForNode qNodes;
         if (datalakeIndex != null)

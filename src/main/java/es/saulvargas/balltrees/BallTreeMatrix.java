@@ -21,24 +21,28 @@ import it.unimi.dsi.fastutil.ints.IntArrayList;
 import static java.lang.Math.max;
 import static java.lang.Math.sqrt;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 
 import edu.rmit.trajectory.clustering.kmeans.IndexNode;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * Ball tree.
  *
  * @author Saúl Vargas (Saul.Vargas@glasgow.ac.uk)
  */
+@Data
 public class BallTreeMatrix extends BinaryTree {
 
     private static final Random random = new Random();
     static double weight[];// indicate the weight on each dimension, for normalization
     
+    public BallTreeMatrix(){
+        super();
+    };
     public BallTreeMatrix(NodeBall root) {
         super(root);
     }
@@ -194,14 +198,16 @@ public class BallTreeMatrix extends BinaryTree {
     //the above function can be optimized to build a balanced kd-tree, by changing the spliting rules to Median of medians or midvalue
     
 
+    @Data
     public static class Ball extends BinaryTree.NodeBall {
 
         public double[] center;
         public double radius;
         public int[] rows;//it
-        public final double[][] itemMatrix;
+        public double[][] itemMatrix;
+        public HashMap<Integer, double[]> itemMatrixMapping;
         @Getter
-        public double[] ubMove;
+        public HashMap<Integer, Double> ubMove;
 
         public void setCenter(double[] center) {
             this.center = center;
@@ -220,13 +226,13 @@ public class BallTreeMatrix extends BinaryTree {
             calculateRadius();
         }
 
-        public Ball(double[] ubMove, int[] rows, double[][] itemMatrix) {
+        public Ball(int[] rows, HashMap<Integer, Double> ubMove, HashMap<Integer, double[]> itemMatrixMapping) {
             this.rows = rows;
-            this.itemMatrix = itemMatrix;
+            this.itemMatrixMapping = itemMatrixMapping;
             this.ubMove = ubMove;
-            this.rowsID = rows;
-            this.calculateCenter();
-            this.calculateRadius();
+//            this.rowsID = rows;
+            this.calculateCenterEMD();
+            this.calculateRadiusEMD();
         }
 
         @Override
@@ -261,6 +267,19 @@ public class BallTreeMatrix extends BinaryTree {
             }
         }
 
+        private void calculateCenterEMD() {
+            center = new double[2];
+
+            for (int row : rows) {
+                for (int i = 0; i < center.length; i++) {
+                    center[i] += itemMatrixMapping.get(row)[i];
+                }
+            }
+            for (int i = 0; i < center.length; i++) {
+                center[i] /= rows.length;
+            }
+        }
+
         private void calculateRadius() {
             radius = 0;
 
@@ -271,6 +290,15 @@ public class BallTreeMatrix extends BinaryTree {
             if (radius > 100) {
                 System.out.println();
             }
+        }
+
+        private void calculateRadiusEMD() {
+            radius = 0;
+
+            for (int row : rows) {
+                radius = max(radius, distance2(center, itemMatrixMapping.get(row)));
+            }
+            radius = sqrt(radius);
         }
 
         public double mip(double[] q) {
@@ -293,17 +321,17 @@ public class BallTreeMatrix extends BinaryTree {
             return radius;
         }
 
-        public int[] getRows() {
-            return rows;
-        }
+//        public int[] getRows() {
+//            return rows;
+//        }
 
         public void clearRows() {
             rows = null;
         }
 
-        public double[][] getItemMatrix() {
-            return itemMatrix;
-        }
+//        public double[][] getItemMatrix() {
+//            return itemMatrix;
+//        }
         
         public int traverseConvert(IndexNode rootKmeans, int dimension) {
     		rootKmeans.setRadius(radius);
@@ -337,22 +365,22 @@ public class BallTreeMatrix extends BinaryTree {
     	}
 
         public int traverseConvert2(IndexNode rootKmeans, int dimension) {
-            double[] d = new double[this.rowsID.length];
+            double[] d = new double[this.rows.length];
             int index = 0;
-            int[] var5 = this.rowsID;
+            int[] var5 = this.rows;
             int var6 = var5.length;
 
             int count;
             for(count = 0; count < var6; ++count) {
                 int row = var5[count];
-                d[index] = this.ubMove[row];
+                d[index] = this.ubMove.get(row);
                 ++index;
             }
 
             double maxUbMove = this.calcateMaxUbMove(d);
             rootKmeans.setEMDRadius(this.radius, maxUbMove);
             rootKmeans.setPivot(this.center);
-            if (this.rows == null) {
+            if (this.getLeftChild() != null && this.getRightChild() != null) {
                 count = 0;
                 IndexNode childleftnodekmeans = new IndexNode(dimension);
                 count = count + this.getLeftChild().traverseConvert2(childleftnodekmeans, dimension);
@@ -370,10 +398,11 @@ public class BallTreeMatrix extends BinaryTree {
 
                 for(int var11 = 0; var11 < var10; ++var11) {
                     int id = var9[var11];
-                    aIntegers.add(id + 1);
+//                    id + 1 -> id
+                    aIntegers.add(id);
 
                     for(int i = 0; i < dimension; ++i) {
-                        sumOfPoints[i] += this.itemMatrix[id][i];
+                        sumOfPoints[i] += this.itemMatrixMapping.get(id)[i];
                     }
                 }
 
