@@ -369,8 +369,8 @@ public class Framework {
         clearAll();
         readDatalake(config.getFrontendLimitation());
         createDatalake(config.getFrontendLimitation());
-        loadTrajectoryIndex(defaultTrajectoryDataset());
-        initRoadmap(config.getFrontendLimitation());
+//        loadTrajectoryIndex(defaultTrajectoryDataset());
+//        initRoadmap(config.getFrontendLimitation());
         log.info("All data loaded.");
     }
 
